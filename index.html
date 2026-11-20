@@ -3,763 +3,583 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>아이해담 AIHAEDAM</title>
-<meta name="description" content="아이해담은 엄마의 기준으로 고른 아이를 위한 프리미엄 수산물 브랜드입니다. 무염·무양념 순살 민물장어를 시작으로 아이 반찬과 가족 식탁을 위한 순살 수산물을 소개합니다.">
-<meta property="og:title" content="아이해담 AIHAEDAM | 아이를 위한 프리미엄 수산물">
-<meta property="og:description" content="엄마가 먼저 고르고, 아이가 맛있게 먹도록. 속초에서 시작한 프리미엄 어린이 수산물 브랜드.">
+<title>아이해담 사업성 검토</title>
+<meta name="robots" content="noindex, nofollow">
+<meta name="description" content="아이해담 사업성 검토: 수익 구조, 운영 리스크, 공급망, 안전관리, 리스크 반영 손익, 단계별 추진 전략.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&family=Noto+Sans+KR:wght@300;400;500;700&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;700&display=swap">
 <style>
-/* Layout: editorial premium-food site — warm table imagery first, quiet oat/white bands, one navy anchor band; symbol = a bowl (담다) holding the sun (해) */
+/* Layout: long-form review, verdict first then evidence; numbered sections because the order is the argument. Every claim carries a source tag. */
 :root{
   --paper:#F7F4EE; --oat:#E7DECF; --oat-2:#EFE9DE; --navy:#1D2836; --ink:#2A3340; --muted:#68707B;
-  --sage:#7E917C; --sage-deep:#4F6250; --sea:#9DB4C3; --line:#D9CFBE; --card:#FBF9F5; --on-navy:#F3EFE7;
-  --serif:'Noto Serif KR','Nanum Myeongjo',Georgia,serif;
-  --sans:'Noto Sans KR','Apple SD Gothic Neo','Malgun Gothic',system-ui,sans-serif;
-  --gutter:max(20px, env(safe-area-inset-left,0px)); --gutter-r:max(20px, env(safe-area-inset-right,0px)); --wrap:1180px;
+  --sage:#7E917C; --sage-deep:#4F6250; --line:#D9CFBE; --card:#FBF9F5; --on-navy:#F3EFE7;
+  --warn:#9A4A16; --warn-bg:#F6E7D6; --ok-bg:#E1EADF; --info:#2F5573; --info-bg:#E2EAF0; --q:#6A4C8A; --q-bg:#ECE6F2;
+  --bar:#C9B48E; --bar-ref:#8FA894; --bar-us:#1D2836;
+  --serif:'Noto Serif KR',Georgia,serif; --sans:'Noto Sans KR','Malgun Gothic',system-ui,sans-serif;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --paper:#141B24;--oat:#232D39;--oat-2:#1A222C;--navy:#0E141B;--ink:#E8E3D9;--muted:#A3ABB5;--sage:#9DB09B;--sage-deep:#B9CAB7;--sea:#7F9AAC;--line:#2F3A47;--card:#1A222C;--on-navy:#F3EFE7;color-scheme:dark}}
-:root[data-theme="dark"]{--paper:#141B24;--oat:#232D39;--oat-2:#1A222C;--navy:#0E141B;--ink:#E8E3D9;--muted:#A3ABB5;--sage:#9DB09B;--sage-deep:#B9CAB7;--sea:#7F9AAC;--line:#2F3A47;--card:#1A222C;--on-navy:#F3EFE7;color-scheme:dark}
-
+  --paper:#141B24;--oat:#232D39;--oat-2:#1A222C;--navy:#0E141B;--ink:#E8E3D9;--muted:#A3ABB5;--sage:#9DB09B;--sage-deep:#B9CAB7;--line:#2F3A47;--card:#1A222C;--on-navy:#F3EFE7;--warn:#F0B68A;--warn-bg:#3A2A1E;--ok-bg:#22302A;--info:#9CC2E0;--info-bg:#1E2C38;--q:#CDB6E8;--q-bg:#2C2338;--bar:#8C7A5A;--bar-ref:#6E8A73;--bar-us:#D9CFBE;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#141B24;--oat:#232D39;--oat-2:#1A222C;--navy:#0E141B;--ink:#E8E3D9;--muted:#A3ABB5;--sage:#9DB09B;--sage-deep:#B9CAB7;--line:#2F3A47;--card:#1A222C;--on-navy:#F3EFE7;--warn:#F0B68A;--warn-bg:#3A2A1E;--ok-bg:#22302A;--info:#9CC2E0;--info-bg:#1E2C38;--q:#CDB6E8;--q-bg:#2C2338;--bar:#8C7A5A;--bar-ref:#6E8A73;--bar-us:#D9CFBE;color-scheme:dark}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
-body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--paper);color:var(--ink);font-family:var(--sans);font-size:16px;line-height:1.75;word-break:keep-all;overflow-wrap:break-word;margin:0}
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--paper)}
-a{color:inherit}
-h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-0.02em;text-wrap:balance;margin:0;line-height:1.38}
+h1,h2,h3{font-family:var(--serif);font-weight:500;letter-spacing:-.02em;text-wrap:balance;margin:0;line-height:1.38}
 p{margin:0}
-.wrap{max-width:var(--wrap);margin:0 auto;padding-left:var(--gutter);padding-right:var(--gutter-r)}
-.eyebrow{font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--sage-deep);font-weight:500}
-.lead{font-size:17px;color:var(--muted);max-width:36em}
-.tbd{display:inline-block;font-size:12px;color:var(--sage-deep);border:1px dashed var(--sage);border-radius:999px;padding:1px 10px;line-height:1.7;white-space:nowrap}
-:focus-visible{outline:2px solid var(--sage-deep);outline-offset:3px}
-
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:52px;padding:0 28px;border-radius:2px;font:500 14px/1 var(--sans);letter-spacing:.06em;text-decoration:none;cursor:pointer;border:1px solid transparent;transition:background .25s,color .25s,border-color .25s}
+.wrap{max-width:1080px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{font-size:12px;letter-spacing:.26em;text-transform:uppercase;color:var(--sage-deep);font-weight:500}
+.muted{color:var(--muted)}
+.btn{display:inline-flex;align-items:center;gap:10px;height:52px;padding:0 26px;font:500 15px/1 var(--sans);text-decoration:none;border:1px solid transparent;cursor:pointer;transition:background .2s,color .2s}
+.btn-light{background:var(--on-navy);color:#1D2836}
+.btn-light:hover{background:#D9CFBE}
 .btn-dark{background:var(--navy);color:var(--on-navy)}
-.btn-dark:hover{background:var(--sage-deep);color:#fff}
-.btn-line{border-color:currentColor;background:transparent;color:inherit}
-.btn-line:hover{background:var(--ink);color:var(--paper)}
-.on-dark .btn-line:hover{background:var(--on-navy);color:var(--navy)}
+.btn-dark:hover{background:var(--sage-deep)}
+.btn-line{border-color:currentColor;color:inherit}
+.btn svg{width:18px;height:18px}
 
-header.site{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-.hbar{display:flex;align-items:center;justify-content:space-between;height:66px;gap:16px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer}
-.logo svg{width:32px;height:32px;flex:none;color:var(--navy)}
-:root[data-theme="dark"] .logo svg{color:var(--ink)}
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .logo svg{color:var(--ink)}}
-.logo b{font-family:var(--serif);font-weight:600;font-size:20px;letter-spacing:.02em}
-.logo small{display:block;font-size:9px;letter-spacing:.36em;color:var(--muted);line-height:1;margin-top:4px}
-nav.main{display:flex;gap:30px;font-size:14px}
-nav.main a{text-decoration:none;cursor:pointer;opacity:.8}
-nav.main a:hover,nav.main a[aria-current="page"]{opacity:1;color:var(--sage-deep)}
-.menu-btn{display:none;background:none;border:0;padding:8px;cursor:pointer;color:var(--ink)}
-.menu-btn svg{width:24px;height:24px}
-@media (max-width:860px){
-  nav.main{position:fixed;inset:calc(66px + env(safe-area-inset-top,0px)) 0 auto 0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px var(--gutter-r) 20px var(--gutter);display:none}
-  nav.main.open{display:flex}
-  nav.main a{padding:14px 0;border-bottom:1px solid var(--line);font-size:16px}
-  .menu-btn{display:block}
-  .hdr-cta{display:none}
-}
-.view{display:none}
-.view.active{display:block}
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:color-mix(in srgb,var(--paper) 94%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.top b{font-family:var(--serif);font-weight:600;white-space:nowrap}
+.top .btn{height:38px;padding:0 16px;font-size:13px;white-space:nowrap}
+.toc{display:flex;gap:16px;font-size:13px;overflow-x:auto}
+.toc a{text-decoration:none;color:var(--muted);white-space:nowrap}
+.toc a:hover{color:var(--ink)}
+@media (max-width:980px){.toc{display:none}}
 
-/* HERO */
-.hero{background:var(--oat-2);overflow:hidden}
-.hero-inner{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center;padding-block:64px}
-.hero-copy{display:flex;flex-direction:column;gap:26px}
-.hero h1{font-size:clamp(30px,3.9vw,48px);font-weight:500}
-.hero .sub{font-size:16px;color:var(--muted)}
-.hero-ctas{display:flex;flex-wrap:wrap;gap:12px}
-.table-art{position:relative;aspect-ratio:5/4;width:100%;max-width:100%;overflow:hidden;background:
-  repeating-linear-gradient(90deg,rgba(120,100,70,.05) 0 2px,transparent 2px 7px),
-  repeating-linear-gradient(0deg,rgba(120,100,70,.04) 0 2px,transparent 2px 9px),
-  linear-gradient(160deg,#E9DFCD,#D8CAB2)}
-.table-art .window{position:absolute;left:0;right:0;top:0;height:16%;background:linear-gradient(180deg,rgba(255,250,240,.55),transparent)}
-.dish{position:absolute;left:12%;top:16%;width:58%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 46%,#F6F1E8 0 56%,#E6DCCB 57% 61%,#F3EDE3 62% 100%);box-shadow:0 26px 50px rgba(60,45,25,.25);display:grid;place-items:center}
-.dish .rice{position:absolute;width:44%;height:30%;border-radius:50%;background:radial-gradient(circle,#FFFDF8,#EFE8DA);top:44%;left:28%}
-.dish .eel{position:absolute;width:46%;height:13%;border-radius:40% 48% 44% 38%;background:linear-gradient(180deg,#D9B68C,#B5865A);box-shadow:inset 0 -5px 8px rgba(0,0,0,.12);top:38%;left:27%;transform:rotate(-8deg)}
-.dish .eel.e2{top:48%;left:31%;transform:rotate(-4deg)}
-.bowl{position:absolute;right:9%;top:22%;width:20%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#DCE3DA 0 50%,#A9B8A6 52% 58%,#E9EEE7 60%);box-shadow:0 12px 24px rgba(60,45,25,.2)}
-.chop{position:absolute;right:16%;bottom:14%;width:34%;height:7px;border-radius:4px;background:#8B6E4E;transform:rotate(-18deg);box-shadow:0 14px 0 #8B6E4E}
-.cup{position:absolute;right:8%;bottom:36%;width:13%;aspect-ratio:1;border-radius:50%;background:radial-gradient(circle,#C9B48E 0 45%,#F2EDE4 48%);box-shadow:0 10px 20px rgba(60,45,25,.18)}
-.ph-tag{position:absolute;left:14px;bottom:14px;font-size:11px;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:3px 10px;border-radius:999px}
-@media (max-width:860px){.hero-inner{grid-template-columns:1fr;gap:36px;padding-block:48px 56px}}
+.hero{background:var(--navy);color:var(--on-navy);padding-block:80px 72px}
+.hero .eyebrow{color:#9DB4C3}
+.hero h1{font-size:clamp(34px,5vw,56px);color:var(--on-navy);margin:16px 0 20px}
+.hero .lede{font-size:18px;color:#C9D3DC;max-width:42em}
+.verdict{margin-top:40px;display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.14)}
+.verdict div{background:var(--navy);padding:22px 24px;display:flex;flex-direction:column;gap:6px}
+.verdict .k{font-size:12px;letter-spacing:.2em;color:#9DB4C3}
+.verdict .v{font-family:var(--serif);font-size:20px;color:var(--on-navy);line-height:1.45}
+.hero-cta{margin-top:36px;display:flex;flex-wrap:wrap;gap:12px}
+@media (max-width:760px){.verdict{grid-template-columns:1fr}}
 
-.sec{padding-block:96px}
-.sec-head{display:flex;flex-direction:column;gap:16px;margin-bottom:52px;max-width:720px}
-.sec-head h2{font-size:clamp(26px,3.2vw,38px)}
-@media (max-width:860px){.sec{padding-block:68px}.sec-head{margin-bottom:36px}}
+.legend-tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px;align-items:center;font-size:13px;color:#C9D3DC}
 
-.pillars{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--ink)}
-.pillar{padding:32px 32px 8px 0;display:flex;flex-direction:column;gap:14px}
-.pillar+.pillar{padding-left:32px;border-left:1px solid var(--line)}
-.pillar .no{font-size:12px;letter-spacing:.2em;color:var(--muted)}
-.pillar .en{font-family:var(--serif);font-size:30px;letter-spacing:.06em}
-.pillar h3{font-family:var(--sans);font-size:17px;font-weight:700}
-.pillar p{color:var(--muted);font-size:15px}
-.pillar .mark{width:44px;height:44px;color:var(--sage-deep)}
-@media (max-width:860px){.pillars{grid-template-columns:1fr}.pillar,.pillar+.pillar{padding:28px 0;border-left:0;border-bottom:1px solid var(--line)}}
+section.s{padding-block:72px;border-bottom:1px solid var(--line)}
+section.s.alt{background:var(--oat-2)}
+.part{background:var(--oat);padding-block:40px;border-bottom:1px solid var(--line)}
+.part p.eyebrow{margin-bottom:6px}
+.part h2{font-size:clamp(22px,2.6vw,30px)}
+.s-head{display:grid;grid-template-columns:72px 1fr;gap:20px;margin-bottom:32px}
+.s-head .no{font-family:var(--serif);font-size:30px;color:var(--sage-deep);line-height:1.2}
+.s-head h2{font-size:clamp(24px,3vw,34px)}
+.s-head p{margin-top:10px;color:var(--muted);max-width:46em}
+@media (max-width:640px){.s-head{grid-template-columns:1fr;gap:4px}}
+h3.sub{font-family:var(--sans);font-size:18px;font-weight:700;margin:36px 0 14px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:820px){.grid2,.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.card h3{font-family:var(--sans);font-size:17px;font-weight:700}
+.card p,.card li{font-size:15px;color:var(--muted)}
+.card ul,.card ol{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px}
+.card.dark{background:var(--navy);border-color:var(--navy)}
+.card.dark h3{color:var(--on-navy)}
+.card.dark p,.card.dark li{color:#C9D3DC}
+.chip{display:inline-block;font-size:12px;font-weight:700;padding:2px 10px;border-radius:999px;align-self:flex-start;white-space:nowrap;line-height:1.7}
+.chip.ok{background:var(--ok-bg);color:var(--sage-deep)}
+.chip.warn{background:var(--warn-bg);color:var(--warn)}
+.chip.neu{background:var(--oat);color:var(--ink)}
+/* source tags */
+.t{display:inline-block;font-size:11px;font-weight:700;padding:1px 8px;border-radius:3px;white-space:nowrap;vertical-align:1px;line-height:1.7;margin-right:4px}
+.t.f{background:var(--ok-bg);color:var(--sage-deep)}       /* 확인된 사실 */
+.t.e{background:var(--info-bg);color:var(--info)}          /* 외부 자료 */
+.t.a{background:var(--oat);color:var(--ink)}               /* 가정 */
+.t.q{background:var(--q-bg);color:var(--q)}                /* 확인 필요 */
+.hero .t.a{background:#2E3B4C;color:#E8E3D9}
+.note{border-left:4px solid var(--warn);background:var(--warn-bg);color:var(--ink);padding:14px 18px;font-size:14px;margin-top:20px}
+.note.info{border-left-color:var(--info);background:var(--info-bg)}
+.src{font-size:12px;color:var(--muted);margin-top:14px}
+.src a{color:inherit}
 
-.feature{background:var(--oat-2)}
-.feat-grid{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
-.imgph{position:relative;background:linear-gradient(160deg,var(--oat),var(--oat-2));border:1px solid var(--line);display:grid;place-items:center;overflow:hidden;width:100%;max-width:100%}
-.imgph .lbl{position:absolute;left:14px;bottom:14px;font-size:11px;color:var(--muted);background:var(--card);padding:3px 10px;border-radius:999px;border:1px solid var(--line)}
-.pack{width:44%;aspect-ratio:3/4;background:linear-gradient(170deg,rgba(255,255,255,.7),rgba(255,255,255,.3));border:1px solid rgba(255,255,255,.85);border-radius:10px;box-shadow:0 18px 40px rgba(29,40,54,.18);display:flex;flex-direction:column;justify-content:space-between;padding:8%;transform:rotate(-4deg)}
-.pack .band{background:#1D2836;color:#F3EFE7;font-family:var(--serif);font-size:clamp(11px,1.4vw,15px);padding:6px 8px;letter-spacing:.04em}
-.pack .meat{height:38%;border-radius:8px;background:linear-gradient(180deg,#DDBA8F,#BE9265)}
-.pack small{font-size:10px;color:#4A5563;letter-spacing:.08em}
-.pack2{position:absolute;right:12%;bottom:12%;width:30%;transform:rotate(7deg);opacity:.92}
-.feat-copy{display:flex;flex-direction:column;gap:24px}
-.feat-copy h2{font-size:clamp(28px,3.4vw,40px)}
-.spec{display:grid;grid-template-columns:repeat(2,1fr);border-top:1px solid var(--line);margin:0}
-.spec div{padding:16px 0;border-bottom:1px solid var(--line);display:flex;flex-direction:column;gap:2px;min-width:0}
-.spec div:nth-child(odd){padding-right:16px}
-.spec dt{font-size:12px;letter-spacing:.14em;color:var(--muted)}
-.spec dd{font-size:15px;font-weight:500;margin:0}
-@media (max-width:860px){.feat-grid{grid-template-columns:1fr;gap:36px}}
+.tbl{overflow-x:auto;border:1px solid var(--line);background:var(--card)}
+table{width:100%;border-collapse:collapse;font-size:14px;min-width:660px}
+th{text-align:left;font-weight:500;font-size:12px;letter-spacing:.04em;color:var(--muted);background:var(--oat-2);padding:12px 14px;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:12px 14px;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.us td{font-weight:700;background:var(--oat-2)}
+tr.tot td{font-weight:700;border-top:2px solid var(--ink)}
+td.neg{color:var(--warn)}
+.lvl{font-weight:700;white-space:nowrap}
+.lvl.h{color:var(--warn)}
+.lvl.m{color:var(--ink)}
 
-.why{display:grid;grid-template-columns:repeat(5,1fr);gap:20px}
-.why-item{display:flex;flex-direction:column;gap:12px;padding-top:20px;border-top:2px solid var(--sage)}
-.why-item .n{font-family:var(--serif);font-size:14px;color:var(--sage-deep)}
-.why-item h3{font-family:var(--sans);font-size:16px;font-weight:700}
-.why-item p{font-size:14px;color:var(--muted)}
-@media (max-width:1000px){.why{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:520px){.why{grid-template-columns:1fr}}
+.bars{display:flex;flex-direction:column;gap:8px}
+.bar{display:grid;grid-template-columns:minmax(0,230px) 1fr 70px;gap:14px;align-items:center;font-size:14px}
+.bar .lab{text-align:right;color:var(--muted)}
+.bar .track{height:22px;display:block}
+.bar .fill{height:100%;background:var(--bar);border-radius:2px;display:block}
+.bar.ref .fill{background:var(--bar-ref)}
+.bar.us .fill{background:var(--bar-us)}
+.bar.us .lab,.bar.us .val{color:var(--ink);font-weight:700}
+.bar .val{font-variant-numeric:tabular-nums}
+@media (max-width:640px){.bar{grid-template-columns:1fr 64px;row-gap:2px}.bar .lab{grid-column:1/-1;text-align:left}}
 
-.lineup{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.lu{display:flex;flex-direction:column;gap:12px;text-decoration:none;cursor:default}
-.lu.live{cursor:pointer}
-.lu .imgph{aspect-ratio:4/5}
-.lu .en{font-size:11px;letter-spacing:.28em;color:var(--muted)}
-.lu h3{font-size:19px}
-.lu .items{font-size:14px;color:var(--muted)}
-.lu .st{font-size:12px;letter-spacing:.16em;font-weight:500}
-.lu.live .st{color:var(--sage-deep)}
-.lu.soon .st{color:var(--muted)}
-.lu.soon .imgph{opacity:.7}
-.lu.live:hover h3{color:var(--sage-deep)}
-.catline{width:52%;height:auto;color:var(--sage-deep);opacity:.55}
-@media (max-width:900px){.lineup{grid-template-columns:repeat(2,1fr)}}
+.steps{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+.steps div{background:var(--card);border:1px solid var(--line);padding:16px;font-size:14px;display:flex;flex-direction:column;gap:4px}
+.steps b{font-family:var(--serif);font-weight:500;font-size:16px}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
 
-.story-band{background:var(--navy);color:var(--on-navy)}
-.story-band .eyebrow{color:var(--sea)}
-.story-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:72px;align-items:center}
-.story-band h2{color:var(--on-navy);font-size:clamp(26px,3.2vw,38px)}
-.story-band p{color:#C9D3DC}
-.story-art{aspect-ratio:5/4;position:relative;overflow:hidden;width:100%;max-width:100%}
-.story-art .sky{position:absolute;inset:0;background:linear-gradient(180deg,#9AAEBC 0%,#C8CFCB 48%,#E2D6C1 49.5%,#7F97A6 51%,#3E5466 100%)}
-.story-art .hill{position:absolute;left:-10%;right:40%;top:30%;height:22%;background:#55687A;clip-path:polygon(0 100%,18% 40%,34% 62%,52% 10%,70% 55%,86% 30%,100% 100%);opacity:.7}
-.story-art .ph-tag{background:rgba(20,27,36,.45);color:#fff;border-color:transparent}
-@media (max-width:860px){.story-grid{grid-template-columns:1fr;gap:36px}}
+.stage{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.stage .card{border-top:4px solid var(--sage-deep)}
+@media (max-width:820px){.stage{grid-template-columns:1fr}}
 
-.faq{border-top:1px solid var(--ink);max-width:880px}
-.faq details{border-bottom:1px solid var(--line)}
-.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0;font-size:16px;font-weight:500}
-.faq summary::-webkit-details-marker{display:none}
-.faq summary .pm{flex:none;width:18px;height:18px;position:relative}
-.faq summary .pm::before,.faq summary .pm::after{content:"";position:absolute;left:0;right:0;top:50%;height:1px;background:var(--ink);transition:transform .25s}
-.faq summary .pm::after{transform:rotate(90deg)}
-.faq details[open] .pm::after{transform:rotate(0)}
-.faq .ans{padding:0 40px 24px 0;color:var(--muted);font-size:15px}
+.check{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:820px){.check{grid-template-columns:1fr}}
+.check ul{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:8px}
+.check li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:14px;color:var(--ink)}
+.check li::before{content:"";width:14px;height:14px;border:1.5px solid var(--sage-deep);border-radius:2px;margin-top:5px}
 
-footer.site{background:var(--oat-2);border-top:1px solid var(--line);padding-block:56px calc(56px + env(safe-area-inset-bottom,0px))}
-.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px}
-.foot-grid h4{font-size:12px;letter-spacing:.2em;color:var(--muted);font-weight:500;margin:0 0 12px}
-.foot-grid a{display:block;text-decoration:none;font-size:14px;padding:3px 0;cursor:pointer}
-.foot-grid a:hover{color:var(--sage-deep)}
-.foot-grid a.logo{display:flex;margin-bottom:14px}
-.biz{font-size:12px;color:var(--muted);margin-top:36px;line-height:1.9}
-@media (max-width:860px){.foot-grid{grid-template-columns:1fr 1fr}.foot-grid>div:first-child{grid-column:1/-1}}
-
-/* PRODUCT */
-.crumb{font-size:13px;color:var(--muted);padding-block:24px}
-.crumb a{cursor:pointer;text-decoration:none}
-.pd{display:grid;grid-template-columns:1.1fr .9fr;gap:64px;padding-bottom:80px}
-.pd-gallery{display:grid;gap:12px;align-content:start}
-.pd-gallery>.imgph{aspect-ratio:1}
-.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
-.thumbs .imgph{aspect-ratio:1}
-.thumbs .imgph .lbl{font-size:10px;left:6px;bottom:6px;padding:1px 6px}
-.pd-info{display:flex;flex-direction:column;gap:22px;position:sticky;top:calc(90px + env(safe-area-inset-top,0px));align-self:start}
-.pd-info h1{font-size:clamp(26px,3vw,34px)}
-.badges{display:flex;flex-wrap:wrap;gap:8px}
-.badge{font-size:12px;padding:5px 12px;border:1px solid var(--line);border-radius:999px;background:var(--card)}
-.price{font-family:var(--serif);font-size:22px;display:flex;align-items:center;gap:12px;flex-wrap:wrap}
-.notice{font-size:13px;color:var(--muted);background:var(--card);border:1px solid var(--line);padding:14px 16px;line-height:1.7}
-.buy-row{display:flex;gap:10px;flex-wrap:wrap}
-.buy-row .btn{flex:1;min-width:160px}
-.info-table{width:100%;border-collapse:collapse;font-size:14px}
-.info-table th{width:30%;text-align:left;font-weight:500;color:var(--muted);padding:14px 12px 14px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.info-table td{padding:14px 0;border-bottom:1px solid var(--line);vertical-align:top}
-.pd-detail{border-top:1px solid var(--line);padding-block:72px}
-.pd-detail .cols{display:grid;grid-template-columns:repeat(3,1fr);gap:40px}
-.pd-detail .cols h3{font-family:var(--sans);font-size:16px;font-weight:700;margin-bottom:8px}
-.pd-detail .cols p{font-size:14px;color:var(--muted)}
-.tabs{display:flex;gap:4px;border-bottom:1px solid var(--line);margin-bottom:28px;overflow-x:auto}
-.tabs button{background:none;border:0;border-bottom:2px solid transparent;padding:14px 18px;font:500 14px var(--sans);color:var(--muted);cursor:pointer;white-space:nowrap}
-.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
-.tabpanel{max-width:820px}
-@media (max-width:900px){.pd{grid-template-columns:1fr;gap:32px}.pd-info{position:static}.pd-detail .cols{grid-template-columns:1fr;gap:24px}}
-.mbuy{display:none}
-@media (max-width:900px){
-  .mbuy{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--paper);border-top:1px solid var(--line);padding:12px var(--gutter-r) calc(12px + env(safe-area-inset-bottom,0px)) var(--gutter);gap:10px;align-items:center}
-  body.on-product .mbuy{display:flex}
-  body.on-product footer.site{padding-bottom:calc(120px + env(safe-area-inset-bottom,0px))}
-  .mbuy .t{flex:1;min-width:0;font-size:13px;line-height:1.4}
-  .mbuy .t b{display:block;font-family:var(--serif);font-size:15px;font-weight:500}
-  .mbuy .btn{height:48px;padding:0 18px}
-}
-
-/* STORY PAGE */
-.story-hero{background:var(--navy);color:var(--on-navy);padding-block:96px 0}
-.story-hero h1{font-size:clamp(28px,4vw,48px);color:var(--on-navy);max-width:15em}
-.story-hero .eyebrow{color:var(--sea)}
-.story-hero .story-art{aspect-ratio:21/8;margin-top:56px}
-@media (max-width:860px){.story-hero .story-art{aspect-ratio:4/3}}
-.chapters{display:grid;gap:72px;max-width:760px;margin:0 auto}
-.chapter{display:grid;grid-template-columns:120px 1fr;gap:32px}
-.chapter .en{font-size:12px;letter-spacing:.24em;color:var(--sage-deep);padding-top:8px}
-.chapter h2{font-size:26px;margin-bottom:16px}
-.chapter p+p{margin-top:14px}
-@media (max-width:640px){.chapter{grid-template-columns:1fr;gap:10px}}
-.quote{font-family:var(--serif);font-size:clamp(22px,2.6vw,30px);line-height:1.6;text-align:center;max-width:22em;margin:0 auto}
-
-/* GUIDE */
-.guide-hero{padding-block:72px 40px;border-bottom:1px solid var(--line)}
-.guide-hero h1{font-size:clamp(30px,4vw,46px)}
-.gtoc{display:flex;flex-wrap:wrap;gap:8px;margin-top:24px}
-.gtoc button{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px;font:400 13px var(--sans);color:var(--ink);cursor:pointer}
-.gtoc button:hover{border-color:var(--sage)}
-.gsec{padding-block:64px;border-bottom:1px solid var(--line)}
-.gsec>h2{font-size:28px;margin-bottom:8px}
-.gsec>.lead{margin-bottom:32px}
-.g2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.g3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-@media (max-width:860px){.g2,.g3{grid-template-columns:1fr}}
-.box{background:var(--card);border:1px solid var(--line);padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
-.box h3{font-family:var(--sans);font-size:15px;font-weight:700}
-.box p,.box li{font-size:14px;color:var(--muted)}
-.box ul,.box ol{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px}
-.box.pick{border-color:var(--sage-deep);box-shadow:inset 0 0 0 1px var(--sage-deep)}
-.slg{font-family:var(--serif);font-size:19px;color:var(--ink)!important}
-.swatches{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.sw{border:1px solid var(--line);background:var(--card)}
-.sw .c{height:96px}
-.sw .t{padding:12px;font-size:13px;display:flex;flex-direction:column;gap:2px}
-.sw .t span{color:var(--muted);font-size:12px;font-variant-numeric:tabular-nums}
-@media (max-width:860px){.swatches{grid-template-columns:repeat(2,1fr)}}
-.logo-show{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.logo-tile{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;padding:52px 20px;border:1px solid var(--line);min-width:0}
-.logo-tile.dark{background:#1D2836;color:#F3EFE7;border-color:#1D2836}
-.logo-tile.light{background:#F7F4EE;color:#1D2836}
-.logo-tile .wm{font-family:var(--serif);font-weight:600;font-size:clamp(30px,4vw,44px);letter-spacing:.04em;line-height:1}
-.logo-tile .wm-en{font-size:11px;letter-spacing:.46em}
-.logo-tile svg{width:60px;height:60px}
-.logo-tile.h{flex-direction:row;gap:16px}
-.logo-tile.h .stack{display:flex;flex-direction:column;gap:8px}
-@media (max-width:640px){.logo-show{grid-template-columns:1fr}}
-.type-spec{display:flex;flex-direction:column;gap:14px}
-.type-spec .s1{font-family:var(--serif);font-size:32px;line-height:1.3;color:var(--ink)}
-.type-spec .s2{font-family:var(--sans);font-size:16px;color:var(--ink)}
-.type-spec .s3{font-size:12px;letter-spacing:.28em;color:var(--sage-deep)}
-.packs{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.pk{background:var(--oat);border:1px solid var(--line);aspect-ratio:4/3;display:grid;place-items:center;position:relative;overflow:hidden}
-.box3d{width:56%;aspect-ratio:4/3;background:#E2D5BE;box-shadow:0 22px 40px rgba(29,40,54,.2);display:flex;flex-direction:column;justify-content:space-between;padding:6%;color:#1D2836}
-.box3d .bw{font-family:var(--serif);font-weight:600;font-size:clamp(16px,2vw,24px);letter-spacing:.04em}
-.box3d small{font-size:10px;letter-spacing:.3em}
-.box3d .line{height:1px;background:#1D2836;opacity:.5}
-@media (max-width:640px){.packs{grid-template-columns:1fr}}
-.tree{font-size:14px;line-height:2;margin:0;padding-left:18px;color:var(--muted)}
-.tree b{color:var(--ink)}
-
-.toast{position:fixed;left:50%;bottom:calc(96px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);background:var(--navy);color:var(--on-navy);padding:14px 22px;font-size:14px;border-radius:2px;opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;z-index:80;max-width:calc(100% - 40px);text-align:center}
-.toast.show{opacity:1;transform:translate(-50%,0)}
+.big{font-family:var(--serif);font-size:40px;line-height:1.1}
+.cta{background:var(--navy);color:var(--on-navy);padding-block:72px}
+.cta h2{color:var(--on-navy);font-size:clamp(26px,3.4vw,38px)}
+.cta p{color:#C9D3DC;margin-top:12px;max-width:40em}
+.cta .row{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+footer{padding-block:28px calc(28px + env(safe-area-inset-bottom,0px));font-size:12px;color:var(--muted)}
 </style>
-<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<style>img{max-width:100%}[hidden]{display:none!important}</style>
 </head>
 <body>
 
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <symbol id="mark" viewBox="0 0 40 40">
-    <path d="M5 21h30a15 15 0 0 1-30 0z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
-    <circle cx="20" cy="13" r="4" fill="currentColor"/>
-  </symbol>
-</svg>
-
-<header class="site">
-  <div class="wrap hbar">
-    <a class="logo" data-go="" aria-label="아이해담 홈">
-      <svg aria-hidden="true"><use href="#mark"/></svg>
-      <span><b>아이해담</b><small>AIHAEDAM</small></span>
-    </a>
-    <nav class="main" id="nav" aria-label="주요 메뉴">
-      <a data-go="story">아이해담 이야기</a>
-      <a data-go="eel">순살 민물장어</a>
-      <a data-scroll="lineup">제품 카테고리</a>
-      <a data-scroll="faq">자주 묻는 질문</a>
+<div class="top">
+  <div class="wrap">
+    <b>아이해담 사업성 검토</b>
+    <nav class="toc" aria-label="목차">
+      <a href="#p1">결론·시장</a><a href="#p2">운영 리스크</a><a href="#r6">안전·배상</a><a href="#r8">배송</a><a href="#r11">손익</a><a href="#r12">추진 전략</a><a href="#r13">체크리스트</a>
     </nav>
-    <a class="btn btn-dark hdr-cta" data-go="eel" style="height:40px;padding:0 18px">제품 만나보기</a>
-    <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 7h18M3 12h18M3 17h18"/></svg>
-    </button>
+    <a class="btn btn-dark" href="site.html">홈페이지 예시 보기</a>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">Business Feasibility Review · v2 · 2026. 11. 20</p>
+    <h1>아이해담 사업성 검토</h1>
+    <p class="lede">초등학생을 위한 프리미엄 순살 수산물 브랜드를 시작해도 되는지 판단하기 위한 검토입니다. 장점보다 실제로 사업을 시작했을 때 생길 수 있는 문제를 먼저 보았습니다. 확인되지 않은 시장 규모·매출 추정치는 넣지 않았습니다.</p>
+    <div class="verdict">
+      <div><span class="k">판단</span><span class="v">조건부 검증 대상.<br>리스크를 반영하면 24,900원으로는 남는 게 거의 없음</span></div>
+      <div><span class="k">권장 방향</span><span class="v">장어 단일 상품으로 운영 검증 → 공급·품질 체계 → 같은 생산처의 홍게 큐브부터 확장</span></div>
+      <div><span class="k">시작 전 필수</span><span class="v">공급가·공급량 협의, 사전 생산 가능 여부, 여름 배송 테스트, PL보험 약관 확인</span></div>
+    </div>
+    <div class="legend-tags" aria-label="출처 표시 범례">
+      <span>출처 표시:</span><span class="t f">확인</span>사업자 제공·직접 확인 <span class="t e">외부</span>공공·외부 자료 <span class="t a">가정</span>검증 전 사업 가정 <span class="t q">확인 필요</span>실제 확인 전까지 확정 아님
+    </div>
+    <div class="hero-cta">
+      <a class="btn btn-light" href="site.html">아이해담 브랜딩 홈페이지 예시 보기
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+      <a class="btn btn-line" href="#r11">리스크 반영 손익 먼저 보기</a>
+    </div>
   </div>
 </header>
 
-<main>
-<!-- HOME -->
-<section class="view" id="v-home">
-  <div class="hero">
-    <div class="wrap hero-inner">
-      <div class="hero-copy">
-        <p class="eyebrow">Premium Seafood for Kids · From Sokcho</p>
-        <h1>엄마가 먼저 고르고,<br>아이가 맛있게 먹도록.</h1>
-        <p class="sub">엄마의 기준으로 엄선한<br>아이를 위한 프리미엄 수산물, 아이해담</p>
-        <div class="hero-ctas">
-          <a class="btn btn-dark" data-go="eel">제품 만나보기</a>
-          <a class="btn btn-line" data-go="story">아이해담 이야기</a>
-        </div>
-      </div>
-      <div class="table-art" role="img" aria-label="순살 장어 덮밥과 반찬이 놓인 따뜻한 식탁을 표현한 임시 이미지">
-        <div class="window"></div>
-        <div class="dish"><div class="rice"></div><div class="eel"></div><div class="eel e2"></div></div>
-        <div class="bowl"></div><div class="cup"></div><div class="chop"></div>
-        <span class="ph-tag">이미지 교체 영역 · 순살 장어 요리와 식탁</span>
-      </div>
-    </div>
-  </div>
+<!-- ================= PART 1 ================= -->
+<div class="part" id="p1"><div class="wrap"><p class="eyebrow">Part 1</p><h2>사업 개요와 시장</h2></div></div>
 
-  <section class="sec">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Brand Philosophy</p>
-        <h2>내 아이에게 먹일 거니까,<br>조금 더 꼼꼼하게.</h2>
-      </div>
-      <div class="pillars">
-        <div class="pillar">
-          <svg class="mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><circle cx="22" cy="22" r="20"/><circle cx="22" cy="22" r="4" fill="currentColor"/></svg>
-          <p class="no">01</p><p class="en">SELECT</p>
-          <h3>좋은 원물을 고르는 엄마의 기준</h3>
-          <p>누가, 어디에서 기른 원물인지부터 살핍니다. 내 아이에게 먹일 수 있는지가 첫 번째 질문입니다.</p>
-        </div>
-        <div class="pillar">
-          <svg class="mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 22h32a16 16 0 0 1-32 0z"/><path d="M14 16c3-3 13-3 16 0"/></svg>
-          <p class="no">02</p><p class="en">CARE</p>
-          <h3>아이가 먹기 편한 형태를 위한 고민</h3>
-          <p>순살로 손질하고 잔가시를 한 번 더 살핍니다. 한 끼 분량으로 나누고, 양념은 더하지 않습니다.</p>
-        </div>
-        <div class="pillar">
-          <svg class="mark" viewBox="0 0 44 44" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><rect x="9" y="6" width="26" height="32" rx="2"/><path d="M15 16h14M15 22h14M15 28h8"/></svg>
-          <p class="no">03</p><p class="en">TRUST</p>
-          <h3>산지와 제품 정보를 투명하게</h3>
-          <p>확인한 정보만 적습니다. 아직 확인 중인 항목은 확인 중이라고 표시합니다.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec feature">
-    <div class="wrap feat-grid">
-      <div class="imgph" style="aspect-ratio:4/5" role="img" aria-label="순살 민물장어 개별 진공 포장 임시 이미지">
-        <div class="pack"><div class="band">아이해담 순살 민물장어</div><div class="meat"></div><small>UNSALTED · BONELESS</small></div>
-        <div class="pack pack2"><div class="band" style="font-size:10px">아이해담</div><div class="meat"></div><small>FROZEN</small></div>
-        <span class="lbl">제품 촬영 이미지 교체 예정</span>
-      </div>
-      <div class="feat-copy">
-        <p class="eyebrow">Our Product · No.01</p>
-        <h2>아이해담의 첫 번째 수산물,<br>순살 민물장어</h2>
-        <p class="lead">민물장어를 소금도 양념도 더하지 않고 순살로 손질했습니다. 잔가시는 한 번 더 살펴보고, 아이 한 끼 분량으로 나눠 개별 진공 포장합니다. 초등학생 반찬으로도, 가족 식탁의 한 가지 메뉴로도 편하게 쓰세요.</p>
-        <dl class="spec">
-          <div><dt>CONCEPT</dt><dd>무염 · 무양념 순살</dd></div>
-          <div><dt>PACK</dt><dd>한 끼 소포장 · 개별 진공</dd></div>
-          <div><dt>STORAGE</dt><dd>냉동 보관</dd></div>
-          <div><dt>ORIGIN</dt><dd><span class="tbd">실제 확인 후 기재</span></dd></div>
-        </dl>
-        <div><a class="btn btn-dark" data-go="eel">제품 자세히 보기</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Why Aihaedam</p>
-        <h2>왜 아이해담이어야 할까요?</h2>
-        <p class="lead">성장기 식단에 수산물을 자주 올리고 싶지만 손질이 번거로운 부모님을 위해, 고르는 일과 손질하는 일을 저희가 먼저 합니다.</p>
-      </div>
-      <div class="why">
-        <div class="why-item"><span class="n">i.</span><h3>엄마의 기준으로 고른 수산물</h3><p>우리 아이에게 먹일 수 있는지를 기준으로 원물을 고릅니다.</p></div>
-        <div class="why-item"><span class="n">ii.</span><h3>아이가 먹기 편한 순살</h3><p>뼈를 바르고 잔가시를 한 번 더 살핍니다. 검수 기준은 확정되는 대로 공개합니다.</p></div>
-        <div class="why-item"><span class="n">iii.</span><h3>손질 부담을 덜어주는 구성</h3><p>한 끼 분량 개별 포장으로 필요한 만큼만 꺼내 씁니다.</p></div>
-        <div class="why-item"><span class="n">iv.</span><h3>투명한 제품 정보</h3><p>원산지, 원재료, 영양성분은 확인된 내용만 적습니다.</p></div>
-        <div class="why-item"><span class="n">v.</span><h3>좋은 원물을 아이의 식탁까지</h3><p>산지의 생산 파트너와 손질·포장·출고 과정을 함께 관리합니다.</p></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="lineup" style="background:var(--oat-2)">
-    <div class="wrap">
-      <div class="sec-head">
-        <p class="eyebrow">Product Category</p>
-        <h2>장어에서 시작해,<br>아이 식탁의 수산물로.</h2>
-        <p class="lead">지금은 순살 민물장어를 준비하고 있습니다. 다른 수산물은 아이해담의 기준을 통과하는 원물을 찾는 대로 소개합니다.</p>
-      </div>
-      <div class="lineup" id="lineupGrid"></div>
-    </div>
-  </section>
-
-  <section class="sec story-band on-dark">
-    <div class="wrap story-grid">
-      <div class="story-art" role="img" aria-label="속초 바다와 설악 능선을 표현한 임시 이미지">
-        <div class="sky"></div><div class="hill"></div>
-        <span class="ph-tag">이미지 교체 영역 · 속초 바다와 설악</span>
-      </div>
-      <div style="display:flex;flex-direction:column;gap:22px">
-        <p class="eyebrow">Brand Story</p>
-        <h2>엄마의 마음은<br>좋은 것을 고르는 일에서 시작됩니다.</h2>
-        <p>아이해담은 속초에서 시작했습니다. 아이에게 좋은 수산물을 먹이고 싶은 마음과, 가시 바르고 손질하는 일이 쉽지 않은 현실 사이에서 출발한 브랜드입니다.</p>
-        <div><a class="btn btn-line" data-go="story">아이해담 이야기</a></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sec" id="faq">
-    <div class="wrap">
-      <div class="sec-head"><p class="eyebrow">FAQ</p><h2>자주 묻는 질문</h2></div>
-      <div class="faq" id="faqList"></div>
-    </div>
-  </section>
-</section>
-
-<!-- PRODUCT -->
-<section class="view" id="v-eel">
+<section class="s" id="s1">
   <div class="wrap">
-    <p class="crumb"><a data-go="">홈</a> · <a data-scroll="lineup">제품</a> · 순살 민물장어</p>
-    <div class="pd">
-      <div class="pd-gallery">
-        <div class="imgph" role="img" aria-label="제품 대표 이미지 자리">
-          <div class="pack" style="width:40%"><div class="band">아이해담 순살 민물장어</div><div class="meat"></div><small>UNSALTED · BONELESS</small></div>
-          <span class="lbl">대표 이미지 · 교체 예정</span>
-        </div>
-        <div class="thumbs">
-          <div class="imgph"><span class="lbl">손질</span></div>
-          <div class="imgph"><span class="lbl">소포장</span></div>
-          <div class="imgph"><span class="lbl">조리</span></div>
-          <div class="imgph"><span class="lbl">산지</span></div>
-        </div>
-      </div>
-      <div class="pd-info">
-        <p class="eyebrow">Our Product · No.01</p>
-        <h1 id="pdName">아이해담 순살 민물장어</h1>
-        <p class="lead" style="font-size:15px">민물장어를 무염·무양념 순살로 손질해 한 끼 분량씩 나눴습니다. 아이 반찬으로, 가족 식탁의 한 가지 메뉴로 편하게 쓰세요.</p>
-        <div class="badges"><span class="badge">무염 · 무양념</span><span class="badge">순살</span><span class="badge">잔가시 추가 검수</span><span class="badge">개별 진공 소포장</span><span class="badge">냉동</span></div>
-        <div class="price">판매가 <span class="tbd">확정 후 기재</span></div>
-        <div class="notice">출시 준비 중인 제품입니다. 구매는 네이버 스마트스토어로 연결될 예정이며, 이 페이지에서는 결제를 받지 않습니다.</div>
-        <div class="buy-row"><a class="btn btn-dark buy-btn" role="button">스마트스토어에서 구매하기</a></div>
-        <table class="info-table" id="infoTable"></table>
-      </div>
+    <div class="s-head"><span class="no">01</span><div><h2>출발점: 생산 파트너 한 곳, 브랜드는 아이해담</h2><p>같은 생산 파트너가 장어 양식장과 홍게 가공 공장을 함께 운영해, 두 제품을 한 곳에서 출고할 수 있습니다. 생산·출고는 파트너가, 브랜드·판매는 아이해담이 맡는 위탁 구조이며 시설과 물류에 새로 투자하지 않습니다.</p></div></div>
+    <div class="grid2">
+      <div class="card"><span class="chip neu">생산 파트너</span><h3>장어촌 · 사그담 (강원 양양)</h3><ul>
+        <li><span class="t f">확인</span>아버지 지인이 운영하는 업체로, 민물장어 양식장과 홍게 가공 공장을 함께 운영함. 두 제품의 유통·출고에 문제가 없다고 함 (사업 추진자 제공)</li>
+        <li><span class="t f">확인</span>사그담 스마트스토어에서 성인용 1kg 손질 장어 판매 (상세페이지 캡처)</li>
+        <li><span class="t q">확인 필요</span>상세페이지의 HACCP·무항생제 인증 표시: 인증서 범위·유효기간 미확인</li>
+      </ul></div>
+      <div class="card dark"><span class="chip ok">신규 사업</span><h3>아이해담</h3><ul>
+        <li>사업 추진자가 운영하는 별도 브랜드</li>
+        <li>속초는 브랜드의 시작점이며, 제품마다 실제 산지를 표기</li>
+        <li>생산처가 한 곳이라 장어와 홍게 큐브를 <b style="color:#F3EFE7">한 상자로 함께 출고</b>할 수 있는 구조</li>
+      </ul></div>
     </div>
-  </div>
-  <div class="pd-detail">
-    <div class="wrap">
-      <div class="tabs" role="tablist" aria-label="제품 상세 정보">
-        <button role="tab" aria-selected="true" data-tab="t1" id="tab-t1">제품 이야기</button>
-        <button role="tab" aria-selected="false" data-tab="t2" id="tab-t2">보관·해동·조리</button>
-        <button role="tab" aria-selected="false" data-tab="t3" id="tab-t3">원재료·영양정보</button>
-        <button role="tab" aria-selected="false" data-tab="t4" id="tab-t4">배송·교환·반품</button>
-      </div>
-      <div class="tabpanel" id="t1" role="tabpanel" aria-labelledby="tab-t1">
-        <div class="cols">
-          <div><h3>원물에서 시작합니다</h3><p>생산 과정을 직접 볼 수 있는 민물장어 양식장과 함께 준비하고 있습니다. 원물이 어디에서 오는지 설명할 수 있는 제품부터 내놓습니다.</p></div>
-          <div><h3>소금도 양념도 없이</h3><p>원물 그대로 손질했습니다. 간은 아이 입맛에 맞게 집에서 더해 주세요.</p></div>
-          <div><h3>한 끼씩, 필요한 만큼</h3><p>한 팩이 한 끼 분량이 되도록 나눕니다. 팩당 중량은 규격 테스트 후 확정합니다.</p></div>
-        </div>
-        <div class="notice" style="margin-top:36px">잔가시를 한 번 더 살피지만 손질 특성상 작은 가시가 남을 수 있습니다. 아이에게 주기 전에 한 번 더 확인해 주세요. 아이 연령별 1회 제공량은 완제품 성분 분석과 영양 전문가 검토 후 안내합니다.</div>
-      </div>
-      <div class="tabpanel" id="t2" role="tabpanel" aria-labelledby="tab-t2" hidden>
-        <table class="info-table">
-          <tr><th>보관 방법</th><td>냉동 보관 · 세부 보관 온도 <span class="tbd">확정 후 기재</span></td></tr>
-          <tr><th>해동 방법</th><td><span class="tbd">제품 확정 후 작성</span></td></tr>
-          <tr><th>조리 방법</th><td><span class="tbd">제품 확정 후 작성</span> · 어떤 방법이든 속까지 충분히 익혀 드세요.</td></tr>
-          <tr><th>활용 예시</th><td>장어 덮밥, 장어 주먹밥, 달걀말이 속재료처럼 아이 반찬에 쓸 수 있습니다.</td></tr>
-        </table>
-      </div>
-      <div class="tabpanel" id="t3" role="tabpanel" aria-labelledby="tab-t3" hidden>
-        <table class="info-table">
-          <tr><th>원재료</th><td><span class="tbd">실제 제품 정보 반영 예정</span></td></tr>
-          <tr><th>영양정보</th><td><span class="tbd">성분 분석 후 기재</span></td></tr>
-          <tr><th>알레르기 정보</th><td><span class="tbd">확인 후 기재</span></td></tr>
-          <tr><th>소비기한</th><td><span class="tbd">확정 후 기재</span></td></tr>
-          <tr><th>제조원 · 판매원</th><td><span class="tbd">확인 후 기재</span></td></tr>
-        </table>
-      </div>
-      <div class="tabpanel" id="t4" role="tabpanel" aria-labelledby="tab-t4" hidden>
-        <table class="info-table">
-          <tr><th>배송</th><td>냉동 택배 예정 · 출고일과 배송 지역 <span class="tbd">확정 후 기재</span></td></tr>
-          <tr><th>배송비</th><td><span class="tbd">확정 후 기재</span></td></tr>
-          <tr><th>교환·반품</th><td><span class="tbd">정책 확정 후 기재</span> · 스마트스토어 정책과 함께 안내합니다.</td></tr>
-          <tr><th>고객 문의</th><td><span class="tbd">확정 후 기재</span></td></tr>
-        </table>
-      </div>
-    </div>
-  </div>
-  <div class="mbuy">
-    <div class="t"><b>순살 민물장어</b>스마트스토어 연결 예정</div>
-    <a class="btn btn-dark buy-btn" role="button">구매하기</a>
   </div>
 </section>
 
-<!-- STORY -->
-<section class="view" id="v-story">
-  <div class="story-hero on-dark">
-    <div class="wrap">
-      <p class="eyebrow">Aihaedam Story</p>
-      <h1 style="margin-top:18px">엄마의 마음은<br>좋은 것을 고르는 일에서 시작됩니다.</h1>
-      <div class="story-art" role="img" aria-label="속초 바다와 설악 능선 임시 이미지">
-        <div class="sky"></div><div class="hill"></div>
-        <span class="ph-tag">이미지 교체 영역 · 속초 바다</span>
-      </div>
-    </div>
-  </div>
-  <section class="sec">
-    <div class="wrap">
-      <div class="chapters">
-        <div class="chapter"><p class="en">THE WORRY</p><div><h2>좋은 걸 먹이고 싶은데, 쉽지 않았습니다</h2><p>아이에게 생선을 자주 먹이고 싶었습니다. 하지만 가시를 바르고 손질하는 일은 매번 시간이 걸렸고, 어디에서 온 원물인지 확인하기도 어려웠습니다.</p></div></div>
-        <div class="chapter"><p class="en">SOKCHO</p><div><h2>속초에서 시작했습니다</h2><p>아이해담은 바다와 가까운 속초에서 시작한 브랜드입니다. 좋은 수산물을 가까이에서 보고 고를 수 있는 곳에서, 엄마의 기준으로 원물을 살피기 시작했습니다.</p><p>속초는 아이해담이 시작된 곳입니다. 제품마다 실제 산지는 다를 수 있으며, 각 제품의 원산지는 상세페이지에 정확히 표기합니다.</p></div></div>
-        <div class="chapter"><p class="en">THE STANDARD</p><div><h2>엄마가 먼저 고릅니다</h2><p>어디에서 왔는지 확인한 원물을, 아이가 먹기 편한 순살로, 한 끼씩, 양념 없이. 그리고 확인한 것만 말합니다.</p><p>첫 번째 제품은 순살 민물장어입니다. 생산 과정을 직접 볼 수 있는 양식장과 함께 준비하고 있습니다.</p></div></div>
-      </div>
-    </div>
-  </section>
-  <section class="sec" style="background:var(--oat-2)">
-    <div class="wrap" style="display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center">
-      <svg width="48" height="48" style="color:var(--sage-deep)" aria-hidden="true"><use href="#mark"/></svg>
-      <p class="quote">엄마의 기준으로 고른,<br>아이를 위한 좋은 수산물.</p>
-      <a class="btn btn-dark" data-go="eel">제품 만나보기</a>
-    </div>
-  </section>
-</section>
-
-<!-- BRAND GUIDE -->
-<section class="view" id="v-brand">
+<section class="s alt" id="s2">
   <div class="wrap">
-    <div class="guide-hero">
-      <p class="eyebrow">Internal · Brand Guide v0.2</p>
-      <h1 style="margin-top:14px">아이해담 브랜드 가이드</h1>
-      <p class="lead" style="margin-top:14px">브랜드 소개부터 로고, 컬러, 패키지, 사이트 구조, 제품군 확장까지 정리한 내부 문서입니다. 고객에게 공개하는 페이지가 아닙니다.</p>
-      <div class="gtoc" id="gtoc"></div>
-    </div>
-
-    <div class="gsec" id="g1">
-      <h2>1. 브랜드 소개와 핵심 철학</h2>
-      <div class="g2">
-        <div class="box"><h3>아이해담은</h3><p>엄마가 내 아이에게 먹이고 싶은 수산물을 직접 고르고 소개하는 프리미엄 어린이 수산물 브랜드입니다. ‘아이’와 ‘해담’을 더한 이름으로, 아이를 위한 좋은 수산물을 엄마의 마음으로 정성껏 고르고 담는다는 뜻입니다.</p></div>
-        <div class="box"><h3>핵심 철학 · SELECT · CARE · TRUST</h3><ul><li><b>SELECT</b> 좋은 원물을 고르는 엄마의 기준</li><li><b>CARE</b> 아이가 먹기 편한 형태를 위한 고민</li><li><b>TRUST</b> 산지와 제품 정보를 투명하게</li></ul></div>
-        <div class="box"><h3>주요 고객</h3><p>6~11세 초등학생 자녀를 둔 30~40대 부모. 확장 고객은 12~14세 자녀를 둔 가정과 가족 식탁용 수산물을 찾는 소비자.</p></div>
-        <div class="box"><h3>지키는 기준</h3><ul><li>성장·두뇌·면역 등 효능 표현을 쓰지 않습니다</li><li>확인되지 않은 HACCP, 무항생제, 인증, 검사 결과를 적지 않습니다</li><li>잔가시가 100% 없다고 말하지 않습니다</li><li>속초는 시작점이며, 제품별 실제 산지를 표기합니다</li></ul></div>
-      </div>
-    </div>
-
-    <div class="gsec" id="g2">
-      <h2>2. 슬로건과 핵심 카피</h2>
-      <p class="lead">후보 4개 중 <b>“엄마의 기준으로 고른, 아이를 위한 좋은 수산물”</b>을 대표 슬로건으로 선택했습니다. 브랜드가 무엇을 파는지(아이를 위한 수산물)와 왜 믿을 수 있는지(엄마의 기준)가 한 문장에 모두 들어 있어 로고 아래, 패키지, 검색 광고 어디에나 그대로 쓸 수 있습니다.</p>
-      <div class="g2">
-        <div class="box pick"><h3>대표 슬로건 · 선택</h3><p class="slg">엄마의 기준으로 고른, 아이를 위한 좋은 수산물</p><p>사용처: 로고 하단, 패키지, 스토어 소개, 광고 문구</p></div>
-        <div class="box"><h3>핵심 메시지 (메인 카피)</h3><p class="slg">엄마가 먼저 고르고, 아이가 맛있게 먹도록.</p><p>사용처: 홈페이지 첫 화면, SNS 프로필, 상세페이지 첫 장</p></div>
-        <div class="box"><h3>철학 카피</h3><p class="slg">내 아이에게 먹일 거니까, 조금 더 꼼꼼하게.</p><p>후보 “아이에게 먹이는 것이니까, 한 번 더 꼼꼼하게”를 철학 섹션 제목으로 다듬어 사용</p></div>
-        <div class="box"><h3>보조 카피 (선택하지 않은 후보)</h3><ul><li>좋은 수산물을 아이의 식탁까지 → ‘왜 아이해담’ 섹션 항목으로 사용</li><li>엄마의 마음으로 고른 바른 한 끼 → 세트 상품명이나 정기배송 문구로 보관</li></ul></div>
-      </div>
-      <div class="box" style="margin-top:20px"><h3>키워드를 녹인 카피 예시</h3><ul>
-        <li>민물장어를 소금 없이, 순살로. 무염 장어를 찾는 부모님을 위한 첫 번째 제품.</li>
-        <li>초등학생 반찬 고민이 많은 날, 꺼내서 바로 조리하는 한 끼.</li>
-        <li>성장기 식단에 수산물 한 가지를 더 올리는 가장 쉬운 방법.</li>
-        <li>고기 반찬만 반복될 때, 아이 단백질 반찬의 선택지를 넓혀 보세요.</li>
-        <li>엄마의 기준으로 고른 프리미엄 어린이 수산물.</li></ul></div>
-    </div>
-
-    <div class="gsec" id="g3">
-      <h2>3. 로고 디자인</h2>
-      <p class="lead">심볼은 <b>그릇(담다) 위에 뜬 해(海·해)</b>입니다. 반원은 좋은 것을 담는 그릇을, 위의 점은 동해의 해이자 그 그릇을 받는 아이를 뜻합니다. 국문 ‘아이해담’ 워드마크가 중심이고, 영문 AIHAEDAM은 넓은 자간의 보조 표기로 씁니다.</p>
-      <div class="logo-show">
-        <div class="logo-tile light"><svg aria-hidden="true"><use href="#mark"/></svg><span class="wm">아이해담</span><span class="wm-en">AIHAEDAM</span></div>
-        <div class="logo-tile dark"><svg aria-hidden="true"><use href="#mark"/></svg><span class="wm">아이해담</span><span class="wm-en">AIHAEDAM</span></div>
-        <div class="logo-tile light h"><svg aria-hidden="true" style="width:48px;height:48px"><use href="#mark"/></svg><span class="stack"><span class="wm" style="font-size:30px">아이해담</span><span class="wm-en">AIHAEDAM</span></span></div>
-        <div class="logo-tile light"><svg aria-hidden="true" style="width:72px;height:72px"><use href="#mark"/></svg><span class="wm-en">SYMBOL ONLY</span></div>
-      </div>
-      <div class="g3" style="margin-top:20px">
-        <div class="box"><h3>조합</h3><ul><li>세로형: 패키지 정면, 스토어 대표 이미지</li><li>가로형: 홈페이지 헤더, 라벨 띠</li><li>심볼 단독: 진공팩 스티커, SNS 프로필, 파비콘</li></ul></div>
-        <div class="box"><h3>하지 않는 것</h3><ul><li>물고기·파도·캐릭터 추가</li><li>둥글고 귀여운 서체로 변형</li><li>원색 파랑, 그라데이션, 그림자</li></ul></div>
-        <div class="box"><h3>다음 단계</h3><ul><li>지금 로고는 시안입니다</li><li>워드마크는 전용 레터링으로 다듬기를 권장</li><li>KIPRIS에서 ‘아이해담’ 29류·35류 상표 검색 후 확정 (확인하지 않음)</li></ul></div>
-      </div>
-    </div>
-
-    <div class="gsec" id="g4">
-      <h2>4. 브랜드 컬러와 폰트</h2>
-      <div class="swatches">
-        <div class="sw"><div class="c" style="background:#F7F4EE"></div><div class="t"><b>Warm White</b><span>#F7F4EE · 메인 배경</span></div></div>
-        <div class="sw"><div class="c" style="background:#E7DECF"></div><div class="t"><b>Oatmeal</b><span>#E7DECF · 보조 배경·패키지</span></div></div>
-        <div class="sw"><div class="c" style="background:#1D2836"></div><div class="t"><b>Deep Navy</b><span>#1D2836 · 로고·텍스트</span></div></div>
-        <div class="sw"><div class="c" style="background:#7E917C"></div><div class="t"><b>Sage</b><span>#7E917C · 강조·라벨</span></div></div>
-        <div class="sw"><div class="c" style="background:#9DB4C3"></div><div class="t"><b>Sea Mist</b><span>#9DB4C3 · 바다 이미지 톤</span></div></div>
-      </div>
-      <p class="lead" style="margin:16px 0 28px;font-size:14px">비율: 웜 화이트·오트밀 70%, 딥 네이비 20%, 세이지·시 미스트 10%. 파랑은 넓은 면적에 쓰지 않습니다.</p>
-      <div class="g2">
-        <div class="box type-spec"><span class="s3">DISPLAY · NOTO SERIF KR</span><span class="s1">엄마가 먼저 고르고,<br>아이가 맛있게 먹도록.</span><p>제목·슬로건·로고 주변 문구. 명조 계열을 Medium 이하로 차분하게.</p></div>
-        <div class="box type-spec"><span class="s3">TEXT · NOTO SANS KR</span><span class="s2">본문, 제품 정보, 버튼은 고딕 계열로 읽기 쉽게. 영문 라벨은 대문자와 넓은 자간.</span><p>상용 전환 시 본문 Pretendard, 제목 마루부리 계열도 후보. 라이선스 확인 후 결정.</p></div>
-      </div>
-    </div>
-
-    <div class="gsec" id="g5">
-      <h2>5. 패키지 디자인 콘셉트</h2>
-      <p class="lead">“좋은 것을 담은 그릇”. 원물이 보이는 투명 진공팩과 단정한 종이 상자, 네이비 한 색 인쇄로 프리미엄 식품의 절제된 인상을 만듭니다.</p>
-      <div class="packs">
-        <div class="pk"><div class="box3d"><div><span class="bw">아이해담</span><br><small>AIHAEDAM</small></div><div class="line"></div><div style="font-size:12px">순살 민물장어 · 무염·무양념<br><span style="font-size:10px;letter-spacing:.2em">FROZEN · 중량 확정 후 기재</span></div></div><span class="ph-tag">외박스 콘셉트</span></div>
-        <div class="pk"><div class="pack" style="width:32%"><div class="band">아이해담</div><div class="meat"></div><small>ONE MEAL PACK</small></div><span class="ph-tag">개별 진공팩 콘셉트</span></div>
-      </div>
-      <div class="g3" style="margin-top:20px">
-        <div class="box"><h3>개별 팩</h3><ul><li>투명 진공 파우치 + 오트밀 라벨 띠</li><li>앞면: 심볼, 제품명, 중량, 무염·무양념</li><li>뒷면: 원산지, 소비기한, 보관 방법, 이력 QR</li></ul></div>
-        <div class="box"><h3>외박스</h3><ul><li>무코팅 오트밀 또는 크라프트 종이</li><li>딥 네이비 한 색 인쇄</li><li>뚜껑 안쪽에 슬로건 한 줄과 조리 안내</li><li>단열재·아이스팩 규격은 생산처와 협의</li></ul></div>
-        <div class="box"><h3>표기 원칙</h3><ul><li>법정 표시사항 위치·크기 확인 후 확정</li><li>확인되지 않은 인증 마크 사용 금지</li><li>‘영유아용’, ‘이유식’ 표기 사용 안 함</li><li>제품별 실제 산지 표기</li></ul></div>
-      </div>
-    </div>
-
-    <div class="gsec" id="g6">
-      <h2>6. 홈페이지 구조와 운영</h2>
-      <div class="g2">
-        <div class="box"><h3>사이트맵</h3><ol><li><b>홈</b>: 메인 비주얼 → 철학(SELECT·CARE·TRUST) → 첫 제품 → 왜 아이해담 → 카테고리 → 스토리 → FAQ</li><li><b>제품 상세</b>: 정보 표, 상세 탭 4개, 모바일 하단 구매 바</li><li><b>아이해담 이야기</b></li><li><b>브랜드 가이드</b> (내부용)</li></ol></div>
-        <div class="box"><h3>운영 연결 지점</h3><ul><li>코드 하단 설정의 <b>smartstoreUrl</b>에 주소를 넣으면 모든 구매 버튼이 연결됩니다</li><li>카테고리·제품은 설정의 목록에 한 줄씩 추가합니다</li><li>‘교체 예정’ 라벨이 붙은 곳이 사진 자리입니다</li><li>정식 도메인에 올릴 때 제목·메타 설명은 이미 작성되어 있습니다</li></ul></div>
-      </div>
-    </div>
-
-    <div class="gsec" id="g7" style="border-bottom:0">
-      <h2>7. 수산물 제품군 확장 구조</h2>
-      <div class="g2">
-        <div class="box"><h3>카테고리 체계</h3><ul class="tree"><li><b>EEL</b> 민물장어: 순살 민물장어 (판매 예정)</li><li><b>WHITE FISH</b> 흰살생선: 순살 가자미, 순살 대구</li><li><b>FISH</b> 생선: 순살 명태, 순살 삼치</li><li><b>SEAFOOD</b> 해산물: 순살 홍게 큐브, 손질 오징어 등</li></ul><p>제품명 규칙: “아이해담 + 순살/손질 + 어종”. 원산지가 확인되면 ‘국내산’ 등을 제품명 앞에 붙입니다.</p></div>
-        <div class="box"><h3>단계</h3><ol><li><b>첫 제품</b>: 순살 민물장어. 성분 분석으로 1회 제공량 확정, 초등학생 이상 가정 중심</li><li><b>자주 먹는 수산물</b>: 흰살생선·홍게살 등으로 재구매 기반 마련. 생산처가 늘면 묶음 배송을 위한 냉동 물류 검토</li><li><b>큐레이션</b>: 연령·요일별 구성 세트, 정기 배송, 계절 원물 한정 판매</li></ol></div>
-      </div>
+    <div class="s-head"><span class="no">02</span><div><h2>타깃: 영유아에서 초등학생 부모로</h2><p>장어의 비타민 A 때문입니다. 연령이 올라갈수록 상한섭취량이 높아 제품 설계가 쉽고, ‘영유아용·이유식’ 표시 규제도 피할 수 있습니다.</p></div></div>
+    <div class="grid3">
+      <div class="card"><h3>6~8세 저학년 부모</h3><p>가시 걱정이 큰 시기. 비타민 A 상한이 낮아 제공량을 가장 보수적으로 잡아야 함.</p></div>
+      <div class="card"><h3>9~11세 고학년 부모</h3><p>제품 설계가 쉬운 연령. 성인용 장어를 같이 먹일 수 있어 ‘왜 아이용인가’를 설득해야 함.</p></div>
+      <div class="card"><h3>확장 · 12~14세와 가족</h3><p>한 끼 소포장 순살 수산물을 찾는 가정. 2차 확장 대상.</p></div>
     </div>
   </div>
 </section>
-</main>
 
-<footer class="site">
+<section class="s" id="s3">
   <div class="wrap">
-    <div class="foot-grid">
-      <div>
-        <a class="logo" data-go=""><svg aria-hidden="true"><use href="#mark"/></svg><span><b>아이해담</b><small>AIHAEDAM</small></span></a>
-        <p style="font-size:14px;color:var(--muted);max-width:26em">엄마의 기준으로 고른, 아이를 위한 좋은 수산물.</p>
-      </div>
-      <div><h4>SHOP</h4><a data-go="eel">순살 민물장어</a><a data-scroll="lineup">제품 카테고리</a><a class="buy-btn">스마트스토어</a></div>
-      <div><h4>BRAND</h4><a data-go="story">아이해담 이야기</a><a data-scroll="faq">자주 묻는 질문</a><a data-go="brand">브랜드 가이드 (내부용)</a></div>
+    <div class="s-head"><span class="no">03</span><div><h2>시장: 어린이 순살 생선은 있고, 순살 장어는 없습니다</h2><p><span class="t e">외부</span>2026년 11월 20일 판매 페이지에서 확인한 가격입니다. 네이버·쿠팡은 자동 접속이 막혀 확인하지 못했습니다.</p></div></div>
+    <div class="tbl"><table>
+      <tr><th>브랜드</th><th>상품 · 어종</th><th>중량</th><th class="n">정상가 → 판매가</th><th class="n">100g당</th><th>원산지</th><th>무염</th><th>확인</th></tr>
+      <tr><td>이니밀즈</td><td>순살 가자미 무염</td><td>500g</td><td class="n">20,000 → 14,900</td><td class="n">2,980</td><td>미표기</td><td>표기</td><td>페이지 · 품절</td></tr>
+      <tr><td>이니밀즈</td><td>순살 고등어 6팩</td><td>700g</td><td class="n">35,000 → 26,900</td><td class="n">3,843</td><td>노르웨이</td><td>미표기</td><td>페이지 · 품절</td></tr>
+      <tr><td>베베쿡</td><td>순살 삼치구이</td><td>300g</td><td class="n">32,000 → 16,510</td><td class="n">5,503</td><td>국내산</td><td>미표기</td><td>페이지</td></tr>
+      <tr><td>생선파는언니</td><td>순살 가자미</td><td>300g</td><td class="n">10,850 → 9,380</td><td class="n">3,127</td><td>미국산</td><td>미확인</td><td>검색 결과만</td></tr>
+      <tr><td>해슬로</td><td>어린이 순살 고등어</td><td>미확인</td><td class="n">– → 9,600</td><td class="n">–</td><td>–</td><td>–</td><td>검색 결과만</td></tr>
+      <tr><td>베베프레시</td><td>판매 페이지 미확인</td><td>–</td><td class="n">–</td><td class="n">–</td><td>–</td><td>–</td><td>수기 확인</td></tr>
+      <tr><td>컬리</td><td>어린이 순살 삼치</td><td>460g</td><td class="n">12,900 → 11,610</td><td class="n">2,524</td><td>국내산</td><td>표기</td><td>페이지</td></tr>
+      <tr><td>초록베베</td><td>순살 국내산 고등어</td><td>350g</td><td class="n">12,800</td><td class="n">3,657</td><td>국내산</td><td>표기</td><td>페이지</td></tr>
+      <tr><td>가시제거연구소</td><td>순살 가자미 50g×5</td><td>250g</td><td class="n">15,900 → 14,500</td><td class="n">5,800</td><td>미표기</td><td>미표기</td><td>페이지 · 품절</td></tr>
+    </table></div>
+    <p class="src">단위 원 · 100g당 = 판매가 ÷ 중량 · 품절 상품은 마지막 표시가 · 컬리(장어 286건), 오아시스(장어 58개), 11번가에서 어린이용 순살 장어는 찾지 못함</p>
+    <div class="grid2" style="margin-top:24px">
+      <div class="card"><span class="chip ok">기회 가설</span><p>확인한 어린이 순살 생선은 고등어·삼치·가자미·연어·갈치 중심이고, 어린이용 순살 장어는 없었습니다.</p></div>
+      <div class="card"><span class="chip warn">반대 해석</span><p>경쟁 상품이 없는 이유가 수요 부족일 수 있습니다. 장어 양식장은 많은데 아무도 하지 않았다는 점은 경고 신호이기도 합니다.</p></div>
     </div>
-    <p class="biz">상호 · 대표자 · 사업자등록번호 · 통신판매업 신고번호 · 주소 · 고객센터: 확정 후 기재<br>이 사이트의 이미지는 임시 이미지이며 실제 제품 사진으로 교체될 예정입니다.</p>
   </div>
-</footer>
+</section>
 
-<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<section class="s alt" id="s4">
+  <div class="wrap">
+    <div class="s-head"><span class="no">04</span><div><h2>가격: 성인용 손질 장어보다도 비쌉니다</h2><p>100g당 가격입니다. <span class="t a">가정</span>판매가는 확인한 어린이 생선의 약 1.7~4.9배이고, 컬리의 성인용 손질 장어보다 비쌉니다.</p></div></div>
+    <div class="bars" role="img" aria-label="100g당 가격 비교 막대그래프">
+      <div class="bar"><span class="lab">컬리 어린이 순살 삼치</span><span class="track"><span class="fill" style="width:22.6%"></span></span><span class="val">2,524</span></div>
+      <div class="bar"><span class="lab">이니밀즈 순살 가자미</span><span class="track"><span class="fill" style="width:26.7%"></span></span><span class="val">2,980</span></div>
+      <div class="bar"><span class="lab">초록베베 순살 고등어</span><span class="track"><span class="fill" style="width:32.8%"></span></span><span class="val">3,657</span></div>
+      <div class="bar"><span class="lab">베베쿡 순살 삼치구이</span><span class="track"><span class="fill" style="width:49.3%"></span></span><span class="val">5,503</span></div>
+      <div class="bar"><span class="lab">가시제거연구소 가자미 50g×5</span><span class="track"><span class="fill" style="width:52.0%"></span></span><span class="val">5,800</span></div>
+      <div class="bar ref"><span class="lab">참고 · 컬리 성인용 손질 장어</span><span class="track"><span class="fill" style="width:59.4%"></span></span><span class="val">6,625</span></div>
+      <div class="bar ref"><span class="lab">참고 · 장어촌 손질 장어</span><span class="track"><span class="fill" style="width:83.3%"></span></span><span class="val">9,300</span></div>
+      <div class="bar us"><span class="lab">가정 · 24,900원 / 250g</span><span class="track"><span class="fill" style="width:89.2%"></span></span><span class="val">9,960</span></div>
+      <div class="bar us"><span class="lab">가정 · 27,900원 / 250g</span><span class="track"><span class="fill" style="width:100%"></span></span><span class="val">11,160</span></div>
+    </div>
+    <p class="src">단위 원/100g · 장어촌: 오아시스 판매종료 상품, 손질 후 300g 27,900원 · 컬리 성인용: 삼삼물산 국내산 손질 민물장어 240g 15,900원(할인가)</p>
+  </div>
+</section>
 
-<script>
-/* ===== 운영 설정: 여기만 바꾸면 사이트 전체에 반영됩니다 ===== */
-const SITE = {
-  smartstoreUrl: "",   // 스마트스토어 상품 URL을 넣으면 모든 구매 버튼이 연결됩니다
-  categories: [
-    { id:"eel",       en:"EEL",        name:"민물장어", items:"순살 민물장어",      status:"live", note:"판매 예정" },
-    { id:"whitefish", en:"WHITE FISH", name:"흰살생선", items:"순살 가자미 · 대구", status:"soon" },
-    { id:"fish",      en:"FISH",       name:"생선",     items:"순살 명태 · 삼치",   status:"soon" },
-    { id:"seafood",   en:"SEAFOOD",    name:"해산물",   items:"순살 홍게 큐브 · 손질 오징어",     status:"soon" }
-  ],
-  info: [
-    ["제품명","아이해담 순살 민물장어"],
-    ["원산지","실제 확인 후 기재"],
-    ["중량","실제 확정 후 기재"],
-    ["포장 단위","한 끼 분량 개별 진공 소포장"],
-    ["원재료","실제 제품 정보 반영 예정"],
-    ["보관 방법","냉동"],
-    ["조리 방법","제품 확정 후 작성"]
-  ],
-  faq: [
-    ["아이해담은 어떤 브랜드인가요?","엄마의 기준으로 고른 수산물을 아이가 먹기 편한 순살·소포장 형태로 소개하는 프리미엄 어린이 수산물 브랜드입니다. 속초에서 시작했고, 첫 제품은 무염·무양념 순살 민물장어입니다."],
-    ["어린이도 먹을 수 있는 제품인가요?","초등학생 자녀를 둔 가정의 아이 반찬과 가족 식탁을 위해 준비한 제품입니다. 장어는 지방과 비타민 A가 많은 식품이라, 아이 연령별 1회 제공량과 먹는 빈도는 완제품 성분 분석과 영양 전문가 검토를 거쳐 안내드릴 예정입니다."],
-    ["장어의 가시는 어떻게 제거하나요?","뼈를 바른 뒤 잔가시를 한 번 더 살피는 검수 과정을 거칩니다. 구체적인 검수 기준은 확정되는 대로 공개합니다. 손질 특성상 작은 가시가 남을 수 있으니 아이에게 주기 전에 한 번 더 확인해 주세요."],
-    ["무염 제품인가요?","소금과 양념을 더하지 않는 무염·무양념 제품으로 준비하고 있습니다. 원물 자체에 들어 있는 나트륨 함량은 성분 분석 후 영양정보에 표기합니다."],
-    ["어떻게 해동하고 조리하나요?","권장 해동·조리 방법은 제품 테스트를 마친 뒤 상세페이지에 안내합니다. 어떤 방법으로 조리하든 속까지 충분히 익혀 주세요."],
-    ["냉동 보관은 어떻게 하나요?","받으신 즉시 냉동실에 보관해 주세요. 세부 보관 온도와 소비기한은 제품 표시사항이 확정되면 안내합니다. 한 번 해동한 제품은 다시 얼리지 않는 것을 권합니다."],
-    ["제품의 원산지는 어디서 확인하나요?","제품 상세페이지의 정보 표와 패키지 표시사항에서 확인하실 수 있습니다. 아이해담은 속초에서 시작한 브랜드이지만, 제품마다 실제 산지는 다를 수 있으며 각 제품의 원산지를 정확히 표기합니다."],
-    ["배송과 교환·반품은 어떻게 진행되나요?","구매는 네이버 스마트스토어에서 진행되며 냉동 택배로 보낼 예정입니다. 출고일, 배송비, 교환·반품 기준은 판매 시작 전에 스마트스토어 정책과 함께 안내합니다."]
-  ]
-};
+<section class="s" id="s5">
+  <div class="wrap">
+    <div class="s-head"><span class="no">05</span><div><h2>제품: 장어로 시작하고, 같은 생산처의 홍게로 넓힙니다</h2></div></div>
+    <div class="grid3">
+      <div class="card"><span class="chip neu">1단계 · 첫 상품</span><h3>순살 민물장어</h3><p>무염·무양념 · 잔가시 추가 검수 · 개별 진공 · 냉동. <span class="t a">가정</span>30g / 40g / 50g 규격 테스트. 비타민 A 때문에 가끔 먹는 특별식.</p></div>
+      <div class="card dark"><span class="chip ok">3단계 첫 확장 후보</span><h3>순살 홍게 큐브</h3><p>홍게살을 한 번 쓸 양으로 얼린 큐브. 달걀찜·볶음밥·죽에 넣어 매주 쓰는 재료라 재구매 상품 역할. 같은 생산처라 추가 공급처 확보가 필요 없음.</p></div>
+      <div class="card"><span class="chip neu">3단계 이후</span><h3>순살 생선</h3><p>가자미 · 대구 · 삼치 · 손질 오징어. 품목마다 공급처와 계절성을 따로 검토(11장).</p></div>
+    </div>
+  </div>
+</section>
 
-const $ = (s, r=document) => r.querySelector(s);
-const $$ = (s, r=document) => [...r.querySelectorAll(s)];
-const TBD = /(실제 확인 후 기재|실제 확정 후 기재|실제 제품 정보 반영 예정|제품 확정 후 작성)/;
+<section class="s alt" id="s6">
+  <div class="wrap">
+    <div class="s-head"><span class="no">06</span><div><h2>영양: 장어는 1회 제공량부터 설계합니다</h2><p><span class="t e">외부</span>장어 100g당 비타민 A는 1,043~2,400μg RAE(출처별)로, 고등어 50, 대구 12보다 수십 배 높습니다.</p></div></div>
+    <div class="tbl"><table>
+      <tr><th>연령</th><th class="n">상한섭취량 (2025)</th><th class="n">상한에 닿는 생 장어 · 일본 값</th><th class="n">· USDA 값</th></tr>
+      <tr><td>3–5세</td><td class="n">750 μg</td><td class="n">약 31g</td><td class="n">약 72g</td></tr>
+      <tr><td>6–8세</td><td class="n">1,100 μg</td><td class="n">약 46g</td><td class="n">약 105g</td></tr>
+      <tr><td>9–11세</td><td class="n">1,600 μg</td><td class="n">약 67g</td><td class="n">약 153g</td></tr>
+      <tr><td>12–14세</td><td class="n">2,300 μg</td><td class="n">약 96g</td><td class="n">약 220g</td></tr>
+    </table></div>
+    <div class="note"><span class="t q">확인 필요</span>일본 값 기준이면 50g 한 팩이 6~8세 상한을 넘습니다. 연령별 규격이 필요할 수 있으며, 완제품 성분 분석과 영양 전문가 검토 전까지 확정된 기준은 없습니다.</div>
+    <p class="src">출처: 2025 한국인 영양소 섭취기준 요약표(보건복지부·한국영양학회) · 日本食品標準成分表 八訂 · USDA FoodData Central</p>
+  </div>
+</section>
 
-$("#lineupGrid").innerHTML = SITE.categories.map(c => `
-  <a class="lu ${c.status==='live'?'live':'soon'}" ${c.status==='live'?`data-go="${c.id}" tabindex="0"`:'aria-disabled="true"'}>
-    <div class="imgph"><svg class="catline" viewBox="0 0 120 40" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M10 18h100a50 18 0 0 1-100 0z"/><circle cx="60" cy="10" r="3" fill="currentColor"/></svg><span class="lbl">${c.status==='live'?'제품 이미지 교체 예정':'준비 중'}</span></div>
-    <span class="en">${c.en}</span>
-    <h3>${c.name}</h3>
-    <span class="items">${c.items}</span>
-    <span class="st">${c.status==='live' ? c.note : 'COMING SOON'}</span>
-  </a>`).join("");
+<!-- ================= PART 2 ================= -->
+<div class="part" id="p2"><div class="wrap"><p class="eyebrow">Part 2</p><h2>운영 리스크와 공급망</h2></div></div>
 
-$("#infoTable").innerHTML = SITE.info.map(([k,v]) =>
-  `<tr><th>${k}</th><td>${TBD.test(v) ? `<span class="tbd">${v}</span>` : v}</td></tr>`).join("");
+<section class="s" id="r1">
+  <div class="wrap">
+    <div class="s-head"><span class="no">07</span><div><h2>운영 리스크 한눈에 보기</h2><p>등급은 검토자의 판단이며 정량 평가가 아닙니다. 영향은 “일어나면 수익과 신뢰에 얼마나 큰가”, 가능성은 “지금 구조에서 얼마나 일어나기 쉬운가”입니다.</p></div></div>
+    <div class="card" style="margin-bottom:20px"><span class="chip ok">그래도 있는 장점</span><ul>
+      <li><b>시작 비용이 작음</b> · <span class="t a">가정</span>테스트 58만~120만 원, 시설 투자 없음</li>
+      <li><b>생산처 한 곳이 장어와 홍게살을 모두 다룸</b> · <span class="t f">확인</span>공급처 협의와 묶음 출고가 단순</li>
+      <li><b>경쟁 공백</b> · <span class="t e">외부</span>확인한 쇼핑몰에 어린이 순살 장어 0건</li>
+      <li><b>경쟁 우위는 브랜드가 아니라 공급처 접근성 하나</b> · 공급가와 인증 서류가 확인돼야 실제 장점이 됨</li>
+    </ul></div>
+    <div class="tbl"><table>
+      <tr><th>리스크</th><th>영향</th><th>가능성</th><th>수익·운영에 미치는 영향</th><th>핵심 대응</th><th>장</th></tr>
+      <tr><td><b>원물 가격 변동</b></td><td class="lvl h">높음</td><td class="lvl m">중간</td><td>공급가 20% 상승 시 27,900원 기준 주문당 이익 7,490원 → 약 4,070원</td><td>공급가 조정 기준·유지 기간 사전 합의, 최소 공헌이익 기준</td><td>08</td></tr>
+      <tr><td><b>공급 중단·부족</b></td><td class="lvl h">높음</td><td class="lvl m">중간</td><td>품절 = 광고비 손실 + 고객 이탈. 생산처가 한 곳이라 대체 공급원 없음</td><td>월·주 공급량 확인, 사전 생산 재고, 공급 협약</td><td>09</td></tr>
+      <tr><td><b>계절성·금어기</b></td><td class="lvl m">중간</td><td class="lvl m">중간</td><td>확장 품목은 시기별 공급 공백. 장어는 양식이라 성격이 다름</td><td>품목별 공급 캘린더, 대체 상품</td><td>10</td></tr>
+      <tr><td><b>가시·이물 사고</b></td><td class="lvl h">매우 높음</td><td class="lvl m">낮음~중간</td><td>어린이 사고 한 건이 브랜드 전체 신뢰를 무너뜨릴 수 있음</td><td>검수 공정·기록, 로트 추적, 주의 표시, PL보험 약관 확인</td><td>11</td></tr>
+      <tr><td><b>여름 배송 해동</b></td><td class="lvl m">중간</td><td class="lvl h">높음(여름)</td><td>재발송 비용 + 환불 + 리뷰 악화. 사고율 5% 가정 시 주문당 약 1,500원 추가</td><td>실제 배송 온도 테스트, 출고 요일 제한, 여름 포장 원가 반영</td><td>12</td></tr>
+      <tr><td><b>당일 손질 방식</b></td><td class="lvl m">중간</td><td class="lvl h">높음</td><td>출고 지연, 품질 편차, 생산처 일정에 배송이 묶임</td><td>사전 생산·냉동 재고 방식 우선 검토</td><td>13</td></tr>
+      <tr><td><b>수요·가격 미검증</b></td><td class="lvl h">높음</td><td class="lvl h">높음</td><td>성인용 손질 장어보다 비싼 가격을 부모가 받아들일지 모름. 장어는 자주 먹일 수 없어 재구매 약함</td><td>사전 판매 20~30세트, 홍게 큐브로 재구매 상품 확보</td><td>03·04</td></tr>
+      <tr><td><b>법적 책임 불명확</b></td><td class="lvl h">높음</td><td class="lvl m">중간</td><td>표시 위반·사고 시 책임 소재 분쟁</td><td>영업 신고 범위 확인, 책임 조항을 넣은 계약서</td><td>14</td></tr>
+    </table></div>
+  </div>
+</section>
 
-$("#faqList").innerHTML = SITE.faq.map(([q,a],i) =>
-  `<details id="faq-${i}"><summary>${q}<span class="pm" aria-hidden="true"></span></summary><div class="ans"><p>${a}</p></div></details>`).join("");
+<section class="s alt" id="r2">
+  <div class="wrap">
+    <div class="s-head"><span class="no">08</span><div><h2>원물 가격 변동 리스크</h2><p>수산물은 공산품과 달리 원물 값이 산지 시세와 생산량에 따라 움직입니다. 판매가를 자주 바꾸기 어려운 온라인 판매에서는 이 변동을 브랜드가 떠안게 됩니다.</p></div></div>
+    <div class="grid2">
+      <div class="card"><h3>무엇이 문제인가</h3><ul>
+        <li><span class="t q">확인 필요</span>장어는 양식이지만 치어(실뱀장어) 수급과 여름철 수요에 따라 시세가 크게 움직이는 것으로 알려져 있음. 생산처의 연간 가격 흐름을 직접 확인해야 함</li>
+        <li><span class="t a">가정</span>공급가가 20% 오르면 27,900원 기준 주문당 이익이 7,490원에서 약 4,070원으로 줄어듦(15장)</li>
+        <li>판매가를 자주 바꾸면 후기·재구매 고객의 신뢰가 떨어짐</li>
+      </ul></div>
+      <div class="card"><h3>대응</h3><ul>
+        <li><b>공급가 결정 기준</b>을 계약 전에 합의: 기준 시세, 조정 주기(예: 분기), 조정 폭 상한</li>
+        <li><b>공급가 유지 기간</b> 확인: 최소 3~6개월 고정이 가능한지 <span class="t q">확인 필요</span></li>
+        <li><b>최소 공헌이익 기준</b>: <span class="t a">가정</span>주문당 5,000원 아래로 떨어지면 가격·구성 조정</li>
+        <li><b>가격 조정 시나리오</b>: <span class="t a">가정</span>공급가 20% 상승 시 같은 이익을 지키려면 판매가 약 31,500원 필요. 가격 대신 팩 수·중량을 조정하는 안도 함께 준비</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
 
-const G = [["g1","브랜드 소개"],["g2","슬로건·카피"],["g3","로고"],["g4","컬러·폰트"],["g5","패키지"],["g6","사이트 구조"],["g7","제품군 확장"]];
-$("#gtoc").innerHTML = G.map(([id,t]) => `<button data-to="${id}">${t}</button>`).join("");
-$("#gtoc").addEventListener("click", e => { const b = e.target.closest("button"); if(b) document.getElementById(b.dataset.to)?.scrollIntoView({behavior:"smooth"}); });
+<section class="s" id="r3">
+  <div class="wrap">
+    <div class="s-head"><span class="no">09</span><div><h2>공급 안정성</h2><p>온라인 판매는 광고를 켜는 순간 주문이 몰립니다. 품절이 나면 광고비는 이미 쓴 뒤이고, 처음 온 고객은 다시 오지 않습니다. 생산처가 한 곳이라 배송은 단순해지지만, <b>대체 공급원이 없다</b>는 점은 그대로 리스크입니다.</p></div></div>
+    <div class="grid2">
+      <div class="card"><h3>생산처에 꼭 물어볼 숫자 <span class="t q">확인 필요</span></h3><ul>
+        <li>월간 공급 가능 물량 (장어·홍게살 각각)</li>
+        <li>주간 최대 손질·포장·출고 가능 수량</li>
+        <li>장어 출하 가능 물량이 줄어드는 시기와 그 이유</li>
+        <li>최소주문량(MOQ)과 한 번 생산할 때의 단위</li>
+        <li>주문이 늘면 인력·설비를 늘릴 수 있는지, 걸리는 시간</li>
+        <li>사그담 자체 판매와 물량이 겹칠 때 우선순위</li>
+      </ul></div>
+      <div class="card"><h3>대응</h3><ul>
+        <li><b>사전 생산 재고</b>: <span class="t a">가정</span>2~4주 판매분을 손질·냉동해 두고 출고(13장)</li>
+        <li><b>광고 상한</b>: 주간 출고 가능 수량을 넘지 않도록 광고 예산·품절 알림 운영</li>
+        <li><b>공급 협약</b>: 월 최소 공급량, 공급 차질 시 사전 통보 기간, 대체 일정</li>
+        <li><b>장기 대비</b>: 판매가 자리 잡으면 같은 기준을 맞출 수 있는 보조 공급처 후보 조사</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
 
-const VIEWS = { "":"v-home", eel:"v-eel", story:"v-story", brand:"v-brand" };
-const TITLES = { "":"아이해담 AIHAEDAM", eel:"순살 민물장어 · 아이해담", story:"아이해담 이야기", brand:"브랜드 가이드 · 아이해담" };
-function show(){
-  const key = location.hash.replace("#","");
-  const id = VIEWS[key] || "v-home";
-  $$(".view").forEach(v => v.classList.toggle("active", v.id === id));
-  document.body.classList.toggle("on-product", id === "v-eel");
-  $$("nav.main a[data-go]").forEach(a => { if(a.dataset.go === key) a.setAttribute("aria-current","page"); else a.removeAttribute("aria-current"); });
-  document.title = TITLES[key] || TITLES[""];
-  closeMenu();
-}
-function go(key){
-  if(location.hash.replace("#","") === key){ window.scrollTo({top:0}); return; }
-  location.hash = key;
-}
-window.addEventListener("hashchange", () => { show(); window.scrollTo({top:0}); });
+<section class="s alt" id="r4">
+  <div class="wrap">
+    <div class="s-head"><span class="no">10</span><div><h2>어종별 계절성과 금어기</h2><p>민물장어는 양식산이라 자연산 어종의 금어기와 같이 보면 안 됩니다. 장어는 양식장의 생산 주기와 출하 가능 물량을, 자연산은 금어기와 어획량을 따로 봐야 합니다.</p></div></div>
+    <div class="tbl"><table>
+      <tr><th>품목</th><th>구분</th><th>금어기·제한</th><th>사업상 의미</th><th>출처</th></tr>
+      <tr><td><b>민물장어</b></td><td>양식</td><td>금어기 개념이 아닌 양식장 생산 주기·출하 물량의 문제</td><td>연중 판매 가능 여부와 시기별 물량을 생산처에서 직접 확인</td><td><span class="t q">확인 필요</span></td></tr>
+      <tr><td><b>홍게(붉은대게)</b></td><td>자연산</td><td>암컷 연중 포획 금지, 수컷 7.10~8.25 (강원 연안자망 6.1~7.10)</td><td>여름에 원물 공백 → 금어기 전 확보한 냉동 원료로 운영 가능한지 확인</td><td><span class="t e">외부</span></td></tr>
+      <tr><td><b>대구</b></td><td>자연산</td><td>1.16~2.15, 금지 체장 35cm 이하</td><td>겨울 한 달 공백, 체장 기준 원물 확보</td><td><span class="t e">외부</span></td></tr>
+      <tr><td><b>가자미</b></td><td>자연산</td><td>문치가자미 12.1~1.31 · 일부 종 체장 20cm 이하 금지</td><td>종류에 따라 다름. 어떤 가자미를 쓸지 먼저 정해야 함</td><td><span class="t e">외부</span></td></tr>
+      <tr><td><b>명태</b></td><td>자연산</td><td><b>국내 연중 포획 금지</b></td><td>‘국내산 명태’ 제품은 사실상 어려움. 수입산을 쓸지, 품목에서 뺄지 결정 필요</td><td><span class="t e">외부</span></td></tr>
+    </table></div>
+    <div class="note info"><b>품목별 공급 캘린더</b>를 만들고, 한 품목이 끊기는 시기에는 다른 품목을 앞에 세우는 운영이 필요합니다. 명태는 확장 목록에서 수입산 여부를 먼저 정해야 합니다.</div>
+    <p class="src">출처: <a href="https://www.mof.go.kr/doc/ko/selectDoc.do?docSeq=46575&menuSeq=971&bbsSeq=10">해양수산부 보도자료</a>, <a href="https://www.hidomin.com/news/articleView.html?idxno=457378">경북도민일보</a>, <a href="http://www.goheung.go.kr/oceans/contentsView.do?pageId=oceans7">고흥군 금어기 정보</a> · 보도자료의 연도는 확인하지 못했으므로 국가법령정보센터 수산자원관리법 시행령 별표로 최종 확인 필요</p>
+  </div>
+</section>
 
-document.addEventListener("click", e => {
-  const g = e.target.closest("[data-go]");
-  if(g){ e.preventDefault(); go(g.dataset.go); return; }
-  const s = e.target.closest("[data-scroll]");
-  if(s){
-    e.preventDefault();
-    const doScroll = () => document.getElementById(s.dataset.scroll)?.scrollIntoView({behavior:"smooth"});
-    if(!$("#v-home").classList.contains("active")){ location.hash = ""; show(); setTimeout(doScroll, 30); } else doScroll();
-    closeMenu(); return;
-  }
-  const b = e.target.closest(".buy-btn");
-  if(b && !SITE.smartstoreUrl){ e.preventDefault(); toast("스마트스토어 연결 예정입니다. 판매가 시작되면 이 버튼으로 구매하실 수 있어요."); }
-});
-document.addEventListener("keydown", e => { if(e.key === "Enter"){ const g = e.target.closest?.(".lu.live"); if(g) go(g.dataset.go); } });
+<section class="s" id="r6">
+  <div class="wrap">
+    <div class="s-head"><span class="no">11</span><div><h2>어린이 식품 안전관리와 배상책임</h2><p>아이를 위한 브랜드는 같은 사고라도 일반 수산물보다 훨씬 크게 받아들여집니다. <b>보험은 안전관리를 대신하지 못합니다.</b> 예방 체계가 먼저이고, 보험은 남는 위험을 위한 마지막 장치입니다.</p></div></div>
+    <h3 class="sub">예방: 공정과 기록</h3>
+    <div class="steps">
+      <div><b>① 손질</b><span class="muted">뼈 제거, 작업자·작업일 기록</span></div>
+      <div><b>② 추가 검수</b><span class="muted">잔가시·껍질 조각 확인 방법과 기준(촉감·광원 등) 문서화</span></div>
+      <div><b>③ 소포장</b><span class="muted">정해진 중량, 이물 재확인</span></div>
+      <div><b>④ 로트 표시</b><span class="muted">생산일자·로트 번호를 팩에 표시해 사고 시 같은 로트 회수</span></div>
+      <div><b>⑤ 기록 보관</b><span class="muted">검수 기록·샘플 사진을 로트별로 보관</span></div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="card"><h3>제품 표시와 고객 안내</h3><ul>
+        <li>“잔가시를 한 번 더 살피지만 작은 가시가 남을 수 있습니다” 같은 <b>주의 문구</b> — 100% 제거 보장 표현 금지</li>
+        <li>아이에게 주기 전 확인, 충분히 익혀 먹기 등 조리·섭취 주의</li>
+        <li>홍게 큐브는 갑각류(게) 알레르기 표시와 껍질 조각 주의</li>
+        <li>사고 접수 창구와 처리 절차를 상세페이지·포장에 명시</li>
+      </ul></div>
+      <div class="card"><h3>생산물배상책임보험(PL보험)에서 확인할 것</h3><ul>
+        <li><span class="t e">외부</span><b>리콜비용은 기본 PL보험에서 면책인 경우가 많고</b>, 리콜보험(회수비용보험)을 따로 들어야 보장됨</li>
+        <li><span class="t e">외부</span>제품 자체의 손해, 계약으로 늘어난 책임, 벌금은 보통 면책. 식품에는 ‘효능불발휘 부담보’ 특약이 붙기도 함</li>
+        <li><span class="t e">외부</span>자기부담금을 넘는 손해배상금만 보상하는 구조</li>
+        <li><span class="t q">확인 필요</span>가시가 목에 걸린 사고, 어린이 소비자 사고가 보장되는지, 판매자(아이해담)가 생산처 보험의 피보험자에 포함되는지, 보상 한도와 보험료</li>
+      </ul></div>
+    </div>
+    <p class="src">출처: <a href="https://www.kiri.or.kr/pdf/%EC%97%B0%EA%B5%AC%EC%9E%90%EB%A3%8C/%EA%B8%B0%ED%83%80%EB%B3%B4%EA%B3%A0%EC%84%9C/josa_18_02_05.pdf">보험연구원 리콜보험 자료</a>, <a href="https://www.kiri.or.kr/pdf/%EC%A0%84%EB%AC%B8%EC%9E%90%EB%A3%8C/KIRI_20171024_101647.pdf">보험연구원 생산물배상책임보험 보고서</a>, <a href="https://insure.korcham.net/file/doc/%EC%A0%9C%EC%A1%B0%EB%AC%BC%EC%B1%85%EC%9E%84(PL)%EB%B0%B0%EC%83%81%EB%B3%B4%ED%97%98%EA%B3%B5%EC%A0%9C_%EC%83%81%ED%92%88%EC%84%A4%EB%AA%85.pdf">대한상공회의소 PL배상보험공제 설명</a>, <a href="https://direct.samsungfire.com/moi1365/doc/moi1365_terms1.pdf">손해보험사 생산물배상책임보험 약관 예시</a> · 일반 구조이며 실제 상품의 약관으로 확인해야 함</p>
+  </div>
+</section>
 
-if(SITE.smartstoreUrl){ $$(".buy-btn").forEach(b => { b.href = SITE.smartstoreUrl; b.target = "_blank"; b.rel = "noopener"; }); }
+<section class="s alt" id="r8">
+  <div class="wrap">
+    <div class="s-head"><span class="no">12</span><div><h2>여름철 냉동 배송</h2><p>냉동 포장을 쓴다는 것만으로는 부족합니다. <b>실제 여름 배송 환경에서 도착 시 온도를 재 보는 것</b>이 출발점입니다.</p></div></div>
+    <h3 class="sub">출시 전 배송 테스트 방법</h3>
+    <div class="steps">
+      <div><b>① 시기</b><span class="muted">가장 더운 7~8월, 또는 출시 직전 여름 기준으로 실시</span></div>
+      <div><b>② 장비</b><span class="muted">온도 기록계(데이터 로거)를 상자 안 제품 옆에 넣어 발송</span></div>
+      <div><b>③ 경로</b><span class="muted">수도권·지방·도서 지역 등 거리별, 택배사별로 여러 건</span></div>
+      <div><b>④ 조건</b><span class="muted">보냉박스 두께·아이스팩 수·드라이아이스 여부 조합 비교</span></div>
+      <div><b>⑤ 판정</b><span class="muted">도착 시 제품 상태·온도 기록으로 포장 사양 확정</span></div>
+    </div>
+    <div class="grid2" style="margin-top:20px">
+      <div class="card"><h3>운영 기준</h3><ul>
+        <li>금요일·공휴일 전날 출고 중단 (택배가 창고에서 하루 이상 머무는 것 방지)</li>
+        <li>택배사별 배송 소요 시간·사고율 비교 후 선택 <span class="t q">확인 필요</span></li>
+        <li>여름철에는 포장 사양을 올리고 그 비용을 원가에 반영 (15장 여름 시나리오)</li>
+        <li>폭염·연휴 기간 일시 판매 중지도 선택지</li>
+      </ul></div>
+      <div class="card"><h3>배송 사고 처리 기준</h3><ul>
+        <li>도착 즉시 사진 접수 → 해동 확인 시 재발송 또는 환불 중 고객 선택</li>
+        <li>재발송·폐기 비용을 누가 부담하는지 생산처·택배사와 사전 합의</li>
+        <li><span class="t a">가정</span>사고율 1%(평시)~5%(여름)를 손익에 반영</li>
+        <li>사고 로그를 남겨 택배사·포장 사양 개선에 사용</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
 
-$$(".tabs button").forEach(btn => btn.addEventListener("click", () => {
-  $$(".tabs button").forEach(b => b.setAttribute("aria-selected", b === btn ? "true" : "false"));
-  $$(".tabpanel").forEach(p => p.hidden = p.id !== btn.dataset.tab);
-}));
+<section class="s" id="r9">
+  <div class="wrap">
+    <div class="s-head"><span class="no">13</span><div><h2>주문 후 손질 vs 사전 생산</h2><p>주문이 들어올 때마다 원물을 손질하는 방식은 처음엔 재고 부담이 없어 보이지만, 출고 지연과 품질 편차가 큽니다. 초기에는 사전 생산·냉동 재고 방식을 우선 검토합니다.</p></div></div>
+    <div class="tbl"><table>
+      <tr><th>기준</th><th>주문 후 당일 손질</th><th>사전 생산 · 냉동 재고</th></tr>
+      <tr><td>원물 확보</td><td>그날 주문량만큼 원물이 있어야 함</td><td>일정 물량을 미리 확보</td></tr>
+      <tr><td>출고 속도</td><td>손질 일정에 따라 지연 가능</td><td>재고에서 바로 냉동 출고</td></tr>
+      <tr><td>품질 일관성</td><td>바쁜 날 검수가 느슨해질 위험</td><td>정해진 날 같은 공정으로 검수</td></tr>
+      <tr><td>주문 급증 대응</td><td>생산처 인력에 그대로 묶임</td><td>재고 범위 안에서 대응</td></tr>
+      <tr><td>재고 부담</td><td>거의 없음</td><td>재고 자금·냉동 보관비·소비기한 관리 필요</td></tr>
+      <tr><td>필요 조건</td><td>생산처의 매일 작업 가능 여부</td><td>냉동 보관 공간, 소비기한 설정, 영업신고 범위 <span class="t q">확인 필요</span></td></tr>
+      <tr class="us"><td>초기 판단</td><td>비추천</td><td>우선 검토</td></tr>
+    </table></div>
+    <h3 class="sub">사전 생산 흐름</h3>
+    <div class="steps">
+      <div><b>① 원물 확보</b><span class="muted">일정 물량</span></div>
+      <div><b>② 손질·가시 제거</b><span class="muted">검수 기록</span></div>
+      <div><b>③ 소포장</b><span class="muted">정해진 중량·로트 표시</span></div>
+      <div><b>④ 검수·냉동</b><span class="muted">급속 냉동 후 보관</span></div>
+      <div><b>⑤ 주문 시 출고</b><span class="muted">냉동 상태 그대로</span></div>
+    </div>
+  </div>
+</section>
 
-const nav = $("#nav"), menuBtn = $("#menuBtn");
-function closeMenu(){ nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false"); }
-menuBtn.addEventListener("click", () => { const o = nav.classList.toggle("open"); menuBtn.setAttribute("aria-expanded", o ? "true" : "false"); });
+<section class="s alt" id="r10">
+  <div class="wrap">
+    <div class="s-head"><span class="no">14</span><div><h2>역할 분담과 법적 책임</h2><p>제조·가공·소분·판매 형태에 따라 필요한 영업신고와 표시 책임이 달라집니다. 아래 법적 해석은 모두 <span class="t q">확인 필요</span>이며, 관할 지자체·식약처(1577-1255) 확인 전에는 확정이 아닙니다.</p></div></div>
+    <div class="grid2">
+      <div class="card"><span class="chip neu">생산처</span><h3>생산·품질·출고</h3><ul><li>원물 생산 및 확보</li><li>손질·가공, 소포장</li><li>품질 검수와 기록</li><li>냉동 보관</li><li>주문별 출고</li></ul></div>
+      <div class="card dark"><span class="chip ok">아이해담</span><h3>브랜드·판매·고객</h3><ul><li>브랜드·상품·패키지 기획</li><li>홈페이지·스마트스토어 운영</li><li>마케팅·광고</li><li>고객 응대</li><li>교환·환불, 배송 사고 처리</li></ul></div>
+    </div>
+    <h3 class="sub">법적 역할 검토</h3>
+    <div class="tbl"><table>
+      <tr><th>항목</th><th>검토 내용</th><th>상태</th></tr>
+      <tr><td>제품 분류</td><td>뼈를 바르고 진공·냉동한 장어는 ‘기타수산물가공품’으로 볼 가능성이 큼. 단순처리 수산물이면 요건이 달라짐</td><td><span class="t q">확인 필요</span></td></tr>
+      <tr><td>생산처</td><td>식품제조·가공업 등록, 냉동 어류 HACCP 의무 여부, 홍게 큐브가 기존 등록 품목 범위에 드는지</td><td><span class="t q">확인 필요</span></td></tr>
+      <tr><td>아이해담</td><td>위탁 제조품을 자기 상표로 판매 → 유통전문판매업 신고 해당 가능 · 온라인 판매 → 통신판매업 신고</td><td><span class="t q">확인 필요</span></td></tr>
+      <tr><td>표시 책임</td><td>제조원과 유통전문판매원 표기, 표시 내용의 책임이 누구에게 있는지</td><td><span class="t q">확인 필요</span></td></tr>
+      <tr><td>생산처 광고</td><td>사그담 상세페이지의 ‘폐질환 개선’ 등 효능 문구는 식품표시광고법 위반 소지 → 함께 판매하기 전 정리</td><td><span class="t q">확인 필요</span></td></tr>
+    </table></div>
+    <h3 class="sub">계약서에 넣을 조항</h3>
+    <div class="grid3">
+      <div class="card"><h3>품질</h3><ul><li>검수 기준과 기록 보관 의무</li><li>로트 표시와 추적</li><li>불량 기준과 반품·재생산</li></ul></div>
+      <div class="card"><h3>공급·가격</h3><ul><li>월 최소 공급량, 리드타임</li><li>공급가 조정 기준·주기·상한</li><li>공급 차질 시 통보 기간</li></ul></div>
+      <div class="card"><h3>사고·책임</h3><ul><li>제품 하자 사고: 생산처 책임 원칙</li><li>배송 사고: 포장 결함과 택배 사고 구분</li><li>리콜 비용 분담, PL보험 가입 의무와 피보험자 범위</li></ul></div>
+    </div>
+    <p class="src">브랜드·상표·상세페이지 등 지식재산은 아이해담 소유로 명시하고, 독점 공급 여부와 해지 조건도 함께 정합니다.</p>
+  </div>
+</section>
 
-let tt;
-function toast(msg){ const t = $("#toast"); t.textContent = msg; t.classList.add("show"); clearTimeout(tt); tt = setTimeout(() => t.classList.remove("show"), 3200); }
+<!-- ================= PART 3 ================= -->
+<div class="part" id="p3"><div class="wrap"><p class="eyebrow">Part 3</p><h2>손익과 추진 전략</h2></div></div>
 
-show();
-</script>
+<section class="s" id="r11">
+  <div class="wrap">
+    <div class="s-head"><span class="no">15</span><div><h2>리스크를 반영한 손익</h2><p>앞선 검토의 단순 가정(주문당 비용 18,500원)에 포장·보관·보험·폐기·배송 사고를 더해 다시 계산했습니다. <span class="t a">가정</span>표의 모든 비용은 견적을 받기 전의 가정값입니다. 판매가 27,900원(50g×5팩) 기준입니다.</p></div></div>
+    <div class="tbl"><table>
+      <tr><th>주문당 비용 (원)</th><th class="n">기본</th><th class="n">원가 상승</th><th class="n">여름 배송 사고</th><th class="n">복합 (최악)</th></tr>
+      <tr><td>원물·손질·가공 (공급가)</td><td class="n">12,000</td><td class="n">14,400</td><td class="n">12,000</td><td class="n">14,400</td></tr>
+      <tr><td>개별 소포장재 (진공팩·라벨)</td><td class="n">500</td><td class="n">500</td><td class="n">500</td><td class="n">500</td></tr>
+      <tr><td>냉동 보관</td><td class="n">200</td><td class="n">200</td><td class="n">200</td><td class="n">200</td></tr>
+      <tr><td>냉동 택배비</td><td class="n">3,500</td><td class="n">3,500</td><td class="n">3,500</td><td class="n">3,500</td></tr>
+      <tr><td>보냉박스·아이스팩 (여름 추가 포함)</td><td class="n">1,200</td><td class="n">1,200</td><td class="n">2,000</td><td class="n">2,000</td></tr>
+      <tr><td>플랫폼 수수료 (4% 가정)</td><td class="n">1,116</td><td class="n">1,116</td><td class="n">1,116</td><td class="n">1,116</td></tr>
+      <tr><td>광고비</td><td class="n">1,500</td><td class="n">2,500</td><td class="n">1,500</td><td class="n">2,500</td></tr>
+      <tr><td>보험료 (주문당 배분)</td><td class="n">100</td><td class="n">100</td><td class="n">100</td><td class="n">100</td></tr>
+      <tr><td>폐기·재고 손실 (공급가의 1%)</td><td class="n">120</td><td class="n">144</td><td class="n">120</td><td class="n">144</td></tr>
+      <tr><td>배송 사고·재발송 (사고율 × 17,400원)</td><td class="n">174</td><td class="n">174</td><td class="n">870</td><td class="n">870</td></tr>
+      <tr class="tot"><td>주문당 총비용</td><td class="n">20,410</td><td class="n">23,834</td><td class="n">21,906</td><td class="n">25,330</td></tr>
+      <tr class="us"><td>주문당 이익 · 27,900원</td><td class="n">7,490</td><td class="n">4,066</td><td class="n">5,994</td><td class="n">2,570</td></tr>
+      <tr><td>주문당 이익 · 24,900원 (수수료 996원)</td><td class="n">4,610</td><td class="n">1,186</td><td class="n">3,114</td><td class="n neg">−310</td></tr>
+      <tr><td>월 300만 원에 필요한 주문 · 27,900원</td><td class="n">401건</td><td class="n">738건</td><td class="n">501건</td><td class="n">1,168건</td></tr>
+    </table></div>
+    <p class="src">원가 상승 = 공급가 +20%, 광고비 +1,000원 · 여름 = 포장 +800원, 사고율 1% → 5% · 재발송 원가 17,400원 = 공급가·포장·보관·택배 · 부가세, 고정비(검사비·보험 연납 차액·운영 인건비), 반품, 쿠폰은 미반영</p>
+    <div class="grid2" style="margin-top:24px">
+      <div class="card"><span class="chip warn">읽는 법</span><p><b>24,900원은 리스크를 반영하면 남는 게 거의 없습니다.</b> 원가가 오르고 여름 사고가 겹치면 팔수록 손해입니다. 판매가는 27,900원 이상이 전제이고, 그래도 최악의 경우 주문당 2,570원입니다.</p></div>
+      <div class="card"><span class="chip neu">무엇을 먼저 확인할까</span><p>이익을 가장 크게 흔드는 숫자는 <b>공급가</b>와 <b>광고비</b>입니다. 생산처 견적과, 작은 광고 테스트로 실제 주문당 광고비를 먼저 확인해야 손익표가 의미를 가집니다.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s alt" id="r12">
+  <div class="wrap">
+    <div class="s-head"><span class="no">16</span><div><h2>단계별 사업 추진 전략</h2><p>처음부터 브랜드를 크게 만들지 않습니다. 단계마다 통과 기준을 두고, 넘지 못하면 멈추거나 방향을 바꿉니다.</p></div></div>
+    <div class="stage">
+      <div class="card"><span class="chip neu">1단계</span><h3>단일 상품으로 사업성 검증</h3><ul>
+        <li>민물장어 한 가지로 시작</li><li>생산처 공급 안정성 확인</li><li>소포장·냉동 출고 체계 검증</li><li>실제 판매가와 공헌이익 확인</li><li>구매 의향과 재구매율 검증</li></ul>
+        <p><b>통과 기준</b> <span class="t a">가정</span>공급가 250g 12,000원 이하 · 지인 밖 사전 판매 20~30세트 · 주문당 이익 5,000원 이상</p></div>
+      <div class="card"><span class="chip neu">2단계</span><h3>공급처와 품질관리 체계</h3><ul>
+        <li>생산처와 공급 계약</li><li>가시 제거·검수 기준 확립</li><li>배송 사고·환불 정책</li><li>PL보험과 식품 법적 책임 정리</li></ul>
+        <p><b>통과 기준</b> 계약서 서명 · 여름 배송 테스트 완료 · 보험 약관 확인 · 영업 신고 완료</p></div>
+      <div class="card dark"><span class="chip ok">3단계</span><h3>품목 확장</h3><ul>
+        <li><b style="color:#F3EFE7">같은 생산처의 순살 홍게 큐브부터</b></li><li>가자미·대구 등 품목별 공급처 확보</li><li>계절별 공급 캘린더 운영</li><li>어린이 프리미엄 수산물 브랜드로 확장</li></ul>
+        <p>명태는 국내 포획 금지로 수입산 여부를 먼저 결정</p></div>
+    </div>
+    <div class="note">1단계 장어 단일 상품은 <b>운영과 수요를 검증하는 단계</b>이지, 이 단계에서 돈을 버는 구조는 아닙니다. 장어는 자주 먹일 수 없어 재구매가 약하므로, 1단계 결과가 좋으면 홍게 큐브를 빠르게 붙이는 것이 수익의 핵심입니다. 병행 안으로, 생산처가 원하면 사그담 판매 대행(상세페이지·광고 운영, 수익 배분)으로 초기 매출과 경험을 쌓을 수 있습니다.</div>
+    <h3 class="sub">대안 비교</h3>
+    <div class="tbl"><table>
+      <tr><th>안</th><th>내용</th><th>초기 비용</th><th>첫 매출</th><th>핵심 위험</th><th>판단</th></tr>
+      <tr><td><b>A. 장어만 계속</b></td><td>어린이 순살 장어 단일 상품 유지</td><td>58만~120만 원</td><td>샘플·검사·신고 후</td><td>수요, 재구매</td><td>검증용으로만</td></tr>
+      <tr class="us"><td>B. 장어 → 홍게 큐브</td><td>1단계 검증 후 같은 생산처의 홍게 큐브 추가</td><td>A + 홍게 샘플·검사비</td><td>1단계 이후</td><td>갑각류 알레르기 표시, 홍게 금어기</td><td>권장</td></tr>
+      <tr><td><b>C. 사그담 판매 대행</b></td><td>기존 성인용 장어 상세페이지·광고 운영, 수익 배분</td><td>거의 없음 (광고비 협의)</td><td>가장 빠름</td><td>계약 조건, 효능 광고 정리</td><td>생산처가 원하면 병행</td></tr>
+    </table></div>
+    <div class="grid2" style="margin-top:24px">
+      <div class="card"><h3>테스트 예산 <span class="t a">가정</span></h3><div class="tbl" style="border:0;background:transparent"><table style="min-width:0">
+        <tr><td>제품 샘플</td><td class="n">10~15만</td></tr><tr><td>영양·안전성 검사</td><td class="n">20~40만</td></tr><tr><td>진공포장재 테스트</td><td class="n">10~20만</td></tr><tr><td>라벨·스티커</td><td class="n">3~5만</td></tr><tr><td>초도 상품 생산</td><td class="n">10~20만</td></tr><tr><td>예비비</td><td class="n">5~20만</td></tr>
+      </table></div></div>
+      <div class="card dark" style="justify-content:center"><p>1단계 테스트 예산 합계</p><p class="big" style="color:var(--on-navy)">58만~120만 원</p><p>확정 견적 아님 · 여름 배송 테스트(온도 기록계·발송비), PL보험료, 사전 생산 재고 자금은 별도</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="s" id="r13">
+  <div class="wrap">
+    <div class="s-head"><span class="no">17</span><div><h2>사업 시작 전 체크리스트</h2><p>아래 질문에 답이 나오기 전에는 판매를 시작하지 않습니다.</p></div></div>
+    <div class="check">
+      <div class="card"><h3>생산처 · 공급</h3><ul>
+        <li>손질 후 250g 기준 장어 공급가는? 얼마 동안 유지되는가?</li>
+        <li>월간·주간 최대 공급·출고 가능 수량은?</li>
+        <li>장어 출하 물량이 줄어드는 시기는? 홍게살 금어기 동안 원료는?</li>
+        <li>MOQ와 1회 생산 단위는? 사전 생산 재고를 보관할 냉동 공간이 있는가?</li>
+        <li>HACCP·무항생제 인증서의 범위·유효기간은?</li>
+        <li>사그담 판매와 물량이 겹치면 우선순위는?</li>
+      </ul></div>
+      <div class="card"><h3>제품 · 안전</h3><ul>
+        <li>잔가시 검수는 누가, 어떤 방법으로, 어떻게 기록하는가?</li>
+        <li>로트 번호를 팩에 표시할 수 있는가?</li>
+        <li>완제품 비타민 A·나트륨·중금속·미생물 검사 결과는?</li>
+        <li>연령별 1회 제공량에 대한 전문가 의견은?</li>
+        <li>소비기한은 어떻게 설정하는가?</li>
+      </ul></div>
+      <div class="card"><h3>법 · 보험 · 계약</h3><ul>
+        <li>제품 분류와 아이해담에 필요한 영업 신고는? (지자체·식약처 확인)</li>
+        <li>홍게 큐브가 생산처의 기존 등록 범위에 드는가?</li>
+        <li>PL보험이 가시 사고·어린이 사고를 보장하는가? 리콜비용은? 자기부담금은?</li>
+        <li>아이해담이 생산처 보험의 피보험자에 포함될 수 있는가?</li>
+        <li>품질·배송·사고 책임을 나눈 계약서 초안이 있는가?</li>
+      </ul></div>
+      <div class="card"><h3>배송 · 판매</h3><ul>
+        <li>여름 실제 배송 테스트 결과 도착 온도는?</li>
+        <li>택배사와 계약 단가, 사고 처리 기준은?</li>
+        <li>배송 사고 시 재발송·환불 기준과 비용 부담 주체는?</li>
+        <li>작은 광고 테스트로 본 실제 주문당 광고비는?</li>
+        <li>지인 밖 고객 20~30명이 실제 가격으로 샀는가?</li>
+      </ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <p class="eyebrow" style="color:#9DB4C3">Brand Preview</p>
+    <h2>아이해담 브랜딩 홈페이지 예시</h2>
+    <p>브랜드 이름, 슬로건, 로고, 제품 페이지가 실제로 어떻게 보일지 만든 예시입니다. 이미지와 확인되지 않은 제품 정보는 임시로 비워 두었습니다.</p>
+    <div class="row">
+      <a class="btn btn-light" href="site.html">홈페이지 예시 보기
+        <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M4 10h12M11 5l5 5-5 5"/></svg></a>
+      <a class="btn btn-line" href="site.html#eel">제품 상세 예시 보기</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">아이해담 사업성 검토 v2 · 2026. 11. 20 · 사업 파트너·가족 검토용 · 금액·판매량은 검증 전 가정치이며 법률·세무·보험 자문이 아닙니다.</div></footer>
 </body>
 </html>
